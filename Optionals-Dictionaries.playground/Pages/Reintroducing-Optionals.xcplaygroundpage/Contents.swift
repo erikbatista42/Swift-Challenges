@@ -14,7 +14,7 @@
  */
 var maybeAnInt: Int? = 15
 //: Here, we have expressly given the variable a value of 15, but we could just as easily have assigned it `nil`:
-maybeAnInt = nil
+maybeAnInt = 16
 /*: 
  Now `maybeAnInt` is `nil`, which is to say it has _no value_. If `maybeAnInt` had declared as a regular `Int`, we could not have set it to `nil`.
  
@@ -50,8 +50,8 @@ if maybeAnInt != nil {
         [154.4, nil, 133, 13.4, 221.3, nil, nil, 103.2]
  
  */
-var anArray:Array<Any>?
-anArray = [154.4, nil, 133, 13.4, 221.3, nil, nil, 103.2] as Array<Any>
+var anArray: Array? = []
+anArray = [154.4, 133, 13.4, 221.3, 103.2] 
 
 
 /*:

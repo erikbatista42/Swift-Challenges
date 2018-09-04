@@ -38,12 +38,13 @@
 */
 func cruiseControl(currentSpeed:Int, distance: Int, previousDistance: Int) {
     // Fix this to implement a basic adaptive cruise control
-    if previousDistance < 20 {
+    if distance < 120 {
+        brakeHard()
+    } else if distance > 30 {
         accelerate()
-    } else if {
-        
     }
 }
+
 //: [Previous](@previous) | [Next](@next)
 //:
 //: This is special code required to make the mini-game work. You do NOT need to understand it right now.
