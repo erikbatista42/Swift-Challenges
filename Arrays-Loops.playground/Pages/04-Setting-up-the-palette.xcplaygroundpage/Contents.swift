@@ -20,6 +20,16 @@ var palette: [Character?] = []
     The display on the right will tell you if your array is correct: if any of your cells light up red, that's an incorrect value! Refer back to the previous pages if you need a refresher on syntax.
 
  */
+for i in 0..<8 {
+    palette.append("🐱")
+}
+
+palette[5] = nil
+palette[6] = nil
+palette[7] = nil
+
+//print(palette)
+
 
 
 

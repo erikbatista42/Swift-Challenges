@@ -8,7 +8,7 @@
 
  */
 
-let palette: [Character] = []
+var palette: [Character] = []
 
 /*:
 
@@ -73,8 +73,8 @@ exampleArray[4]
  Now, you can try setting element 0 of the array to 😜. The first and third elements of the array should now both be set to "😜".
 
  */
-
-
+//palette = "😜"
+//print(palette)
 
 /*:
 
@@ -98,7 +98,7 @@ exampleArray[4]
  Try it out in the working space below.
 
  */
-
+//palette.append("🗞")
 
 
 
@@ -116,7 +116,10 @@ exampleArray[4]
 
  */
 
-
+for index in 0..<5 {
+    palette.append("😈")
+}
+print(palette)
 
 /*:
 
@@ -135,10 +138,7 @@ exampleArray[4]
  - callout(Try it out): Remember `palette.count`? It told us how many elements there are in the array. Let's try replacing 5 with that, and use the _subscript assignment_ operator to set the element corresponding to that index with 👾.
 
  */
-
-
-
-
+palette.count
 
 /*:
 

@@ -30,7 +30,10 @@ var grid: [[Character?]] = []
 
 */
 
-
+for i in 0..<8 {
+    let column = [Character?](repeating: "🐱", count: 10)
+    grid.append(column)
+}
 
 
 
@@ -49,9 +52,17 @@ var grid: [[Character?]] = []
 
 */
 
+// smiling devil emoji
+grid[0][0] = "😈"
+grid[0][9] = "😈"
+grid[7][0] = "😈"
+grid[7][9] = "😈"
 
-
-
+// ghost emojis
+grid[4][4] = "👻"
+grid[4][5] = "👻"
+grid[3][4] = "👻"
+grid[3][5] = "👻"
 
 
 

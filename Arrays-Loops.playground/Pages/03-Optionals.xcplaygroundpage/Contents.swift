@@ -27,7 +27,7 @@ var maybeAnInt: Int? = 15
 
 //: Here, we have expressly given the variable a value of 15, but we could just as easily have assigned it `nil`:
 
-maybeAnInt = nil
+maybeAnInt = 6
 
 /*:
 
