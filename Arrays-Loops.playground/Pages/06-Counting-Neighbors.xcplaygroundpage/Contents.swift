@@ -26,14 +26,23 @@ class MySimulation: NeighborsSimulation {
 
 */
 
+    
+    
     func getAlive(grid: [[Character?]], column x: Int, row y: Int) -> Int {
-
-
-
-
+        // if grid is less than 0, it's out of bounds
+        if x >= grid.count || x < 0 || y < 0 || y >= grid[0].count {
+            print("The range doesn't exist. Please enter a valid number")
+            return 0
+        } else {
+            if grid[x][y] == nil {
+                return 0
+            }
+        }
         return 1
     }
 
+    
+    
 /*:
 
  ## Counting the neighboring cells
@@ -57,11 +66,42 @@ class MySimulation: NeighborsSimulation {
 
 
     override func countNeighbors(grid: [[Character?]], column x: Int, row y: Int) -> Int {
-
-
-
-
-        return 1
+        
+        var neighbors = 0
+        
+        if getAlive(grid: grid, column: x + 1, row: y)  > 0 {
+            neighbors += 1
+        }
+        
+        if getAlive(grid: grid, column: x, row: y - 1)  > 0 {
+            neighbors += 1
+        }
+        
+        if getAlive(grid: grid, column: x, row: y + 1)  > 0 {
+            neighbors += 1
+        }
+        
+        if getAlive(grid: grid, column: x + 1, row: y + 1)  > 0 {
+            neighbors += 1
+        }
+        
+        if getAlive(grid: grid, column: x - 1, row: y)  > 0 {
+            neighbors += 1
+        }
+        
+        if getAlive(grid: grid, column: x - 1, row: y - 1)  > 0 {
+            neighbors += 1
+        }
+        
+        if getAlive(grid: grid, column: x + 1, row: y - 1)  > 0 {
+            neighbors += 1
+        }
+        
+        if getAlive(grid: grid, column: x - 1, row: y + 1)  > 0 {
+            neighbors += 1
+        }
+    
+        return neighbors
     }
 
 
