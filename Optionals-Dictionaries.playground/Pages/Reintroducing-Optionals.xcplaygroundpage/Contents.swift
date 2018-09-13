@@ -50,8 +50,9 @@ if maybeAnInt != nil {
         [154.4, nil, 133, 13.4, 221.3, nil, nil, 103.2]
  
  */
-var anArray: Array? = []
-anArray = [154.4, 133, 13.4, 221.3, 103.2] 
+var myArray: Array? = [154.4, nil, 133.0, 13.4, 221.3, nil, nil, 103.2]
+//myArray = [154.4, nil, 133.0, 13.4, 221.3, nil, nil, 103.2] as? Array<Double>
+
 
 
 /*:
@@ -67,7 +68,14 @@ anArray = [154.4, 133, 13.4, 221.3, 103.2]
         There were 3 nil values and the sum is 625.3.
  
  */
+let numberOfnils = myArray?.filter({ $0 == nil }).count
+print("There are \(numberOfnils ?? 0) nil values in my array!")
+for i in myArray! {
 
+    let sum = 5 //count all the stuff in the array
+
+    print("There are \(numberOfnils) nil values and the sum is \(sum)")
+}
 
  
 /*:
