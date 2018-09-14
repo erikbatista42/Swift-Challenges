@@ -31,7 +31,7 @@ class GameScene: SKScene {
     func topRow() {
         func firstSquare() {
             let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
+            let square = SKSpriteNode(texture: nil, color: .yellow, size: size)
             // bounds is the size
             square.position.x = 120
             square.position.y = 400
@@ -52,7 +52,7 @@ class GameScene: SKScene {
         
         func thirdSquare() {
             let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
+            let square = SKSpriteNode(texture: nil, color: .yellow, size: size)
             square.position.x = 250
             square.position.y = 400
             addChild(square)
@@ -99,7 +99,7 @@ class GameScene: SKScene {
     func bottomRow() {
         func firstSquare() {
             let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
+            let square = SKSpriteNode(texture: nil, color: .yellow, size: size)
             // bounds is the size
             square.position.x = 120
             square.position.y = 270
@@ -120,7 +120,7 @@ class GameScene: SKScene {
         
         func thirdSquare() {
             let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
+            let square = SKSpriteNode(texture: nil, color: .yellow, size: size)
             square.position.x = 250
             square.position.y = 270
             addChild(square)
