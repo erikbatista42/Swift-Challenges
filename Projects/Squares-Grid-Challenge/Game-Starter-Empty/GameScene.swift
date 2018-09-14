@@ -14,6 +14,7 @@ class GameScene: SKScene {
   
     override func didMove(to view: SKView) {
         // Called when the scene has been displayed
+        
     }
     
   
@@ -25,6 +26,7 @@ class GameScene: SKScene {
             self.thirdSquare()
         }
         self.run(action)
+        
     }
     //            var width = view.bounds.width
     //            width = 100
@@ -37,16 +39,22 @@ class GameScene: SKScene {
             square.position.x = view.bounds.width/2
             square.position.y = view.bounds.height/2
         }
+        addChild(square)
     }
+    
         
     func secondSquare() {
             let size = CGSize(width: 50, height: 50)
             let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
             // bounds is the size
             if let view = self.view {
-                square.position.x = view.bounds.width/2
+                var width = view.bounds.width
+                width = 120
+                square.position.x = width
+                
                 square.position.y = view.bounds.height/2
             }
+        addChild(square)
         }
             
     func thirdSquare() {
@@ -54,13 +62,12 @@ class GameScene: SKScene {
                 let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
                 // bounds is the size
                 if let view = self.view {
-                    square.position.x = view.bounds.width/2
+                    var width = view.bounds.width
+                    width = 250
+                    square.position.x = width
                     square.position.y = view.bounds.height/2
-                }
-            }
-        
-    
-    
-    
+        }
+        addChild(square)
+    }
     
 }
