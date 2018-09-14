@@ -21,29 +21,27 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
         let action = SKAction.run {
-            self.firstSquare()
-            self.secondSquare()
-            self.thirdSquare()
+            self.middleRow()
+            self.topRow()
         }
         self.run(action)
         
     }
-    //            var width = view.bounds.width
-    //            width = 100
-    //            square.position.x = width
-    func firstSquare() {
-        let size = CGSize(width: 50, height: 50)
-        let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
-        // bounds is the size
-        if let view = self.view {
-            square.position.x = view.bounds.width/2
-            square.position.y = view.bounds.height/2
-        }
-        addChild(square)
-    }
     
+    func topRow() {
+        func firstSquare() {
+            let size = CGSize(width: 50, height: 50)
+            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
+            // bounds is the size
+            if let view = self.view {
+                square.position.x = view.bounds.width/2
+                square.position.y = view.bounds.height/2
+            }
+            addChild(square)
+        }
+        firstSquare()
         
-    func secondSquare() {
+        func secondSquare() {
             let size = CGSize(width: 50, height: 50)
             let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
             // bounds is the size
@@ -54,20 +52,77 @@ class GameScene: SKScene {
                 
                 square.position.y = view.bounds.height/2
             }
-        addChild(square)
+            addChild(square)
         }
-            
-    func thirdSquare() {
-                let size = CGSize(width: 50, height: 50)
-                let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
-                // bounds is the size
-                if let view = self.view {
-                    var width = view.bounds.width
-                    width = 250
-                    square.position.x = width
-                    square.position.y = view.bounds.height/2
+        secondSquare()
+        
+        func thirdSquare() {
+            let size = CGSize(width: 50, height: 50)
+            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
+            // bounds is the size
+            if let view = self.view {
+                var width = view.bounds.width
+                width = 250
+                square.position.x = width
+                square.position.y = view.bounds.height/2
+            }
+            addChild(square)
         }
-        addChild(square)
+        thirdSquare()
+        
+        
     }
+    
+    
+    
+    
+    
+    
+    
+
+    
+    func middleRow() {
+        func firstSquare() {
+            let size = CGSize(width: 50, height: 50)
+            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
+            // bounds is the size
+            if let view = self.view {
+                square.position.x = view.bounds.width/2
+                square.position.y = view.bounds.height/2
+            }
+            addChild(square)
+        }
+        firstSquare()
+        
+        func secondSquare() {
+            let size = CGSize(width: 50, height: 50)
+            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
+            // bounds is the size
+            if let view = self.view {
+                var width = view.bounds.width
+                width = 120
+                square.position.x = width
+                
+                square.position.y = view.bounds.height/2
+            }
+            addChild(square)
+        }
+        secondSquare()
+        
+        func thirdSquare() {
+            let size = CGSize(width: 50, height: 50)
+            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
+            // bounds is the size
+            if let view = self.view {
+                var width = view.bounds.width
+                width = 250
+                square.position.x = width
+                square.position.y = view.bounds.height/2
+            }
+            addChild(square)
+        }
+        thirdSquare()
+    }
+    
     
 }
