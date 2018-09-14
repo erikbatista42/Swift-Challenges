@@ -48,61 +48,14 @@ class GameScene: SKScene {
     func middleRow() {
         makeSquare(x: (view?.bounds.width)!/2, y: (view?.bounds.height)!/2, color: .magenta)
         makeSquare(x: 120, y: (view?.bounds.height)!/2, color: .magenta)
-        
-    func secondSquare() {
-            let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
-            if let view = self.view {
-                square.position.x = 120
-                
-                square.position.y = view.bounds.height/2
-            }
-            addChild(square)
-        }
-        secondSquare()
-        
-        func thirdSquare() {
-            let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
-            if let view = self.view {
-                square.position.x = 250
-                square.position.y = view.bounds.height/2
-            }
-            addChild(square)
-        }
-        thirdSquare()
+        makeSquare(x: 250, y: (view?.bounds.height)!/2, color: .magenta)
     }
     
     func bottomRow() {
-        func firstSquare() {
-            let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .yellow, size: size)
-            // bounds is the size
-            square.position.x = 120
-            square.position.y = 270
-            addChild(square)
-        }
-        firstSquare()
+        makeSquare(x: 120, y: 270, color: .yellow)
+        makeSquare(x: (view?.bounds.width)!/2, y: 270, color: .magenta)
+        makeSquare(x: 250, y: 270, color: .yellow)
         
-        func secondSquare() {
-            let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
-            if let view = self.view {
-                square.position.x = view.bounds.width/2
-                square.position.y = 270
-            }
-            addChild(square)
-        }
-        secondSquare()
-        
-        func thirdSquare() {
-            let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .yellow, size: size)
-            square.position.x = 250
-            square.position.y = 270
-            addChild(square)
-        }
-        thirdSquare()
     }
     
 }
