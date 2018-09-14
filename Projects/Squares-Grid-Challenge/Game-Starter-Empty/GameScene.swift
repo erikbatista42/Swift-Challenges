@@ -46,16 +46,8 @@ class GameScene: SKScene {
     
     
     func middleRow() {
-        func firstSquare() {
-            let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
-            if let view = self.view {
-                square.position.x = view.bounds.width/2
-                square.position.y = view.bounds.height/2
-            }
-            addChild(square)
-        }
-        firstSquare()
+        makeSquare(x: (view?.bounds.width)!/2, y: (view?.bounds.height)!/2, color: .magenta)
+        makeSquare(x: 120, y: (view?.bounds.height)!/2, color: .magenta)
         
     func secondSquare() {
             let size = CGSize(width: 50, height: 50)
