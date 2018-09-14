@@ -33,11 +33,13 @@ maybeAnInt = 16
  - important: If we're wrong, the code will crash. Here, we test whether `maybeAnInt` has a value and if it does, we rip open the box (force unwrap it) and print its value. Make sure to _ALWAYS_ check for `nil` before force unrwrapping an optional. Code that crashes is bad code!
  
  */
-if maybeAnInt != nil {
-    print("maybeAnInt contains a value, and it is \(maybeAnInt!).")
-} else {
-    print("maybeAnInt does not contain a value.")
-}
+
+//if maybeAnInt != nil {
+//    print("maybeAnInt contains a value, and it is \(maybeAnInt!).")
+//} else {
+//    print("maybeAnInt does not contain a value.")
+//}
+
 /*:
  
  - experiment:
@@ -51,10 +53,6 @@ if maybeAnInt != nil {
  
  */
 var myArray: Array? = [154.4, nil, 133.0, 13.4, 221.3, nil, nil, 103.2]
-//myArray = [154.4, nil, 133.0, 13.4, 221.3, nil, nil, 103.2] as? Array<Double>
-
-
-
 /*:
  
  - callout(Challenge): Write code to iterate through the array and count the number of `nil` values while also summing all the non-nil values. Make sure to force unwrap each element safely!
@@ -68,15 +66,22 @@ var myArray: Array? = [154.4, nil, 133.0, 13.4, 221.3, nil, nil, 103.2]
         There were 3 nil values and the sum is 625.3.
  
  */
-let numberOfnils = myArray?.filter({ $0 == nil }).count
-print("There are \(numberOfnils ?? 0) nil values in my array!")
+
+var numOfNilValues = 0
+var numOfNonNilValues = 0.0
+
 for i in myArray! {
-
-    let sum = 5 //count all the stuff in the array
-
-    print("There are \(numberOfnils) nil values and the sum is \(sum)")
+    if i == nil {
+        numOfNilValues += 1 // adds one everytime there is a nil value!
+    }
+    
+    if i != nil {
+        numOfNonNilValues += i! // adds every element that is not nil
+    }
+    
 }
-
+print("There are \(numOfNilValues) nil values!")
+print("The total number is \(numOfNonNilValues)!")
  
 /*:
  [Next](@next)
