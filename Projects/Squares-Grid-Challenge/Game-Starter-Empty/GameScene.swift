@@ -28,37 +28,22 @@ class GameScene: SKScene {
         self.run(action)
     }
     
-    func topRow() {
-        func firstSquare() {
-            let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .yellow, size: size)
-            // bounds is the size
-            square.position.x = 120
-            square.position.y = 400
-            addChild(square)
-        }
-        firstSquare()
-        
-        func secondSquare() {
-            let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
-            if let view = self.view {
-                square.position.x = view.bounds.width/2
-                square.position.y = 400
-            }
-            addChild(square)
-        }
-        secondSquare()
-        
-        func thirdSquare() {
-            let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .yellow, size: size)
-            square.position.x = 250
-            square.position.y = 400
-            addChild(square)
-        }
-        thirdSquare()
+    func makeSquare(x: CGFloat, y: CGFloat, color: UIColor) {
+        let size = CGSize(width: 50, height: 50)
+        let square = SKSpriteNode(texture: nil, color: color, size: size)
+        // bounds is the size
+        square.position.x = x
+        square.position.y = y
+        addChild(square)
     }
+    
+    func topRow() {
+        makeSquare(x: 120, y: 400, color: .yellow)
+        makeSquare(x: (view?.bounds.width)!/2, y: 400, color: .magenta)
+        makeSquare(x: 250, y: 400, color: .yellow)
+    }
+    
+    
     
     func middleRow() {
         func firstSquare() {
