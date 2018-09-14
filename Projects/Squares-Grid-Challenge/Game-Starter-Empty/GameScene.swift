@@ -11,20 +11,14 @@ import GameplayKit
 
 class GameScene: SKScene {
   
-  
     override func didMove(to view: SKView) {
         // Called when the scene has been displayed
         
     }
     
-  
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        let action = SKAction.run {
-            self.topRow()
-            self.middleRow()
-            self.bottomRow()
-        }
+        let action = SKAction.run { self.makeGrid() }
         self.run(action)
     }
     
@@ -37,25 +31,19 @@ class GameScene: SKScene {
         addChild(square)
     }
     
-    func topRow() {
+    func makeGrid() {
+        // top squares
         makeSquare(x: 120, y: 400, color: .yellow)
         makeSquare(x: (view?.bounds.width)!/2, y: 400, color: .magenta)
         makeSquare(x: 250, y: 400, color: .yellow)
-    }
-    
-    
-    
-    func middleRow() {
+        // middle squares
         makeSquare(x: (view?.bounds.width)!/2, y: (view?.bounds.height)!/2, color: .magenta)
         makeSquare(x: 120, y: (view?.bounds.height)!/2, color: .magenta)
         makeSquare(x: 250, y: (view?.bounds.height)!/2, color: .magenta)
-    }
-    
-    func bottomRow() {
+        // bottom squares
         makeSquare(x: 120, y: 270, color: .yellow)
         makeSquare(x: (view?.bounds.width)!/2, y: 270, color: .magenta)
         makeSquare(x: 250, y: 270, color: .yellow)
-        
     }
-    
+
 }
