@@ -31,7 +31,15 @@ class GameScene: SKScene {
 
         boxTwo.run(sequenceTwo)
         
-
+        // box three
+        let boxThree = makeSquare(x: 300, y: 100, color: .magenta)
+        
+        let moveUpThree = SKAction.moveBy(x: 0, y: 500, duration: 4)
+        let vanishThree = SKAction.fadeOut(withDuration: 1)
+        
+        let sequenceThree = SKAction.sequence([moveUpThree,vanishThree])
+        
+        boxThree.run(sequenceThree)
         
     }
     
