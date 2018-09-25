@@ -14,10 +14,7 @@ class GameScene: SKScene {
     var orangeTree: SKSpriteNode!
     var orange: Orange?
     
-    override func didMove(to view: SKView) {
-        // Connect game objects
-        orangeTree = childNode(withName: "tree") as! SKSpriteNode
-    }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Get the location of the touch of the screen
@@ -36,5 +33,11 @@ class GameScene: SKScene {
             orange?.physicsBody?.applyImpulse(vector)
         }
     }
+    
+    override func didMove(to view: SKView) {
+        // Connect game objects
+        orangeTree = childNode(withName: "tree") as? SKSpriteNode
+    }
+    
     
 }
