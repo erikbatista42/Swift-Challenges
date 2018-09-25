@@ -13,28 +13,14 @@ class GameScene: SKScene {
   
     override func didMove(to view: SKView) {
         // Called when the scene has been displayed
-        let box = makeSquare(x: view.bounds.width/2 - 200, y: view.bounds.height/2 - 200, color: .magenta)
-//        let fadeOut = SKAction.fadeOut(withDuration: 0.3)
+        let box = makeSquare(x: view.bounds.width/2, y: view.bounds.height/2, color: .magenta)
         
-//        let fadeIn = SKAction.fadeIn(withDuration: 2)
-//        let moveUp = SKAction.moveBy(x: 0, y: 50, duration: 0.5)
-////        let moveUp = SKAction.moveBy(
-//        let moveRight = SKAction.moveBy(x: 50, y: 0, duration: 0.5)
-//        let moveDown = SKAction.moveBy(x: 0, y: -200, duration: 1)
-//        let moveLeft = SKAction.moveBy(x: -50, y: 0, duration: 0.5)
-//        let scale = SKAction.scale(by: 5, duration: 1)
-//        let group = SKAction.group([moveDown,scale])
+        let moveUp = SKAction.moveBy(x: 0, y: 250, duration: 1)
+        let vanish = SKAction.fadeOut(withDuration: 0.5)
         
-        let moveRight = SKAction.moveBy(x: 100, y: 0, duration: 1);
-        let jump = SKAction.moveBy(x: 100, y: 100, duration: 2);
-        let moveMoreRight = SKAction.moveBy(x: 100, y: 0, duration: 1);
-        let jumpDown = SKAction.moveBy(x: 100, y: -100, duration: 2);
-        let moveRightAgain = SKAction.moveBy(x: 100, y: 0, duration: 2);
-        let sequence = SKAction.sequence([moveRight, jump, moveMoreRight, jumpDown, moveRightAgain]);
-        box.run(sequence);
-//
-        
-//        box.run(group)
+        let sequence = SKAction.sequence([moveUp,vanish])
+        box.run(sequence)
+  
         
     }
     
