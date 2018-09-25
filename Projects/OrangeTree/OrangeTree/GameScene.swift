@@ -11,5 +11,8 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    var orangeTree: SKSpriteNode!
+    var orange: Orange?
+    
     
 }
