@@ -12,15 +12,26 @@ import GameplayKit
 class GameScene: SKScene {
   
     override func didMove(to view: SKView) {
-        // Called when the scene has been displayed
-        let box = makeSquare(x: view.bounds.width/2, y: view.bounds.height/2, color: .magenta)
+        // box one
+        let boxOne = makeSquare(x: 50, y: 100, color: .magenta)
         
-        let moveUp = SKAction.moveBy(x: 0, y: 250, duration: 1)
-        let vanish = SKAction.fadeOut(withDuration: 0.5)
+        let moveUpOne = SKAction.moveBy(x: 0, y: 500, duration: 4)
+        let vanishOne = SKAction.fadeOut(withDuration: 1)
         
-        let sequence = SKAction.sequence([moveUp,vanish])
-        box.run(sequence)
-  
+        let sequenceOne = SKAction.sequence([moveUpOne,vanishOne])
+        boxOne.run(sequenceOne)
+        
+        // box two
+        let boxTwo = makeSquare(x: view.bounds.width/2, y: view.bounds.height/2, color: .magenta)
+        
+        let moveUpTwo = SKAction.moveBy(x: 0, y: 250, duration: 2)
+        let vanishTwo = SKAction.fadeOut(withDuration: 1)
+       
+        let sequenceTwo = SKAction.sequence([moveUpTwo,vanishTwo])
+
+        boxTwo.run(sequenceTwo)
+        
+
         
     }
     
