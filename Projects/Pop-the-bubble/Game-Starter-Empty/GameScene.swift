@@ -8,13 +8,18 @@
 
 import SpriteKit
 import GameplayKit
+import UIKit
 
 class GameScene: SKScene {
     
     var counter = 0
     let counts = SKLabelNode(fontNamed: "Helvetica")
+    
+    
   
     override func didMove(to view: SKView) {
+        countScore()
+        
         let firstAction = SKAction.run {
             self.makeSquare()
         }
@@ -25,6 +30,8 @@ class GameScene: SKScene {
         
         let repeatCreations = SKAction.repeatForever(sequence)
         self.run(repeatCreations)
+        
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -34,7 +41,7 @@ class GameScene: SKScene {
             if node.name == "bubble" {
                 node.removeFromParent()
                 counter += 1
-                counts.text = "Your score is: \(counter)"
+                counts.text = "Score: \(counter)"
             }
         }
     }
@@ -42,7 +49,8 @@ class GameScene: SKScene {
     func makeSquare() {
         
             let size = CGSize(width: 50, height: 50)
-            let square = SKSpriteNode(texture: nil, color: .magenta, size: size)
+        let rainbowBox = SKTexture(image: UIImage(named: "rainbowBox")!)
+            let square = SKSpriteNode(texture: rainbowBox, color: .magenta, size: size)
                 // bounds is the size
             square.position.x = CGFloat(arc4random_uniform(UInt32(view?.bounds.width ?? 0)))
             square.position.y = 0
@@ -56,6 +64,13 @@ class GameScene: SKScene {
             square.run(sequence)
             square.name = "bubble"
         }
+    
+    func countScore() {
+        counts.position = CGPoint(x: (view?.bounds.width)!/2, y: ((view?.bounds.height)!) - 20)
+        counts.fontSize = 25
+        counts.text = "Score: \(counter)"
+        addChild(counts)
+    }
     
 
 }
