@@ -10,6 +10,9 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    
+    var counter = 0
+    let counts = SKLabelNode(fontNamed: "Helvetica")
   
     override func didMove(to view: SKView) {
         let firstAction = SKAction.run {
@@ -24,10 +27,16 @@ class GameScene: SKScene {
         self.run(repeatCreations)
     }
     
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-//        let action = SKAction.run { self.makeGrid() }
-//        self.run(action)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touches = touches.first {
+            let location = touches.location(in: self)
+            let node = atPoint(location)
+            if node.name == "bubble" {
+                node.removeFromParent()
+                counter += 1
+                counts.text = "Your score is: \(counter)"
+            }
+        }
     }
     
     func makeSquare() {
