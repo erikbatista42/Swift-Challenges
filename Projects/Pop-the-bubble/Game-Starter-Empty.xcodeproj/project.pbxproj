@@ -13,6 +13,7 @@
 		D8A7EBF8214AA9C30022E043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A7EBF6214AA9C30022E043 /* Main.storyboard */; };
 		D8A7EBFA214AA9C40022E043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A7EBF9214AA9C40022E043 /* Assets.xcassets */; };
 		D8A7EBFD214AA9C40022E043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A7EBFB214AA9C40022E043 /* LaunchScreen.storyboard */; };
+		FEEE04EB215AFF2D000EF5B4 /* MakeBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE04EA215AFF2D000EF5B4 /* MakeBubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D8A7EBF9214AA9C40022E043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8A7EBFC214AA9C40022E043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8A7EBFE214AA9C40022E043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEEE04EA215AFF2D000EF5B4 /* MakeBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeBubble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		D8A7EBEB214AA9C30022E043 /* Game-Starter-Empty */ = {
 			isa = PBXGroup;
 			children = (
-				D8A7EBEC214AA9C30022E043 /* AppDelegate.swift */,
+				FEEE04E8215AFE17000EF5B4 /* Singletons */,
+				FEEE04EA215AFF2D000EF5B4 /* MakeBubble.swift */,
 				D8A7EBF2214AA9C30022E043 /* GameScene.swift */,
 				D8A7EBF4214AA9C30022E043 /* GameViewController.swift */,
+				FEEE04E9215AFE28000EF5B4 /* Resources */,
+			);
+			path = "Game-Starter-Empty";
+			sourceTree = "<group>";
+		};
+		FEEE04E8215AFE17000EF5B4 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				D8A7EBEC214AA9C30022E043 /* AppDelegate.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		FEEE04E9215AFE28000EF5B4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				D8A7EBF6214AA9C30022E043 /* Main.storyboard */,
 				D8A7EBF9214AA9C40022E043 /* Assets.xcassets */,
 				D8A7EBFB214AA9C40022E043 /* LaunchScreen.storyboard */,
 				D8A7EBFE214AA9C40022E043 /* Info.plist */,
 			);
-			path = "Game-Starter-Empty";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +118,7 @@
 				TargetAttributes = {
 					D8A7EBE8214AA9C30022E043 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -139,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A7EBF3214AA9C30022E043 /* GameScene.swift in Sources */,
+				FEEE04EB215AFF2D000EF5B4 /* MakeBubble.swift in Sources */,
 				D8A7EBF5214AA9C30022E043 /* GameViewController.swift in Sources */,
 				D8A7EBED214AA9C30022E043 /* AppDelegate.swift in Sources */,
 			);
@@ -285,15 +306,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 753UQ7TNXJ;
-				INFOPLIST_FILE = "Game-Starter-Empty/Info.plist";
+				DEVELOPMENT_TEAM = DFUU36AARG;
+				INFOPLIST_FILE = "$(SRCROOT)/Game-Starter-Empty/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.webdevils.Game-Starter-Empty";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -303,15 +324,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 753UQ7TNXJ;
-				INFOPLIST_FILE = "Game-Starter-Empty/Info.plist";
+				DEVELOPMENT_TEAM = DFUU36AARG;
+				INFOPLIST_FILE = "$(SRCROOT)/Game-Starter-Empty/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.webdevils.Game-Starter-Empty";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
