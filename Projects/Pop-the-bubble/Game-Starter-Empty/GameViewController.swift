@@ -9,11 +9,16 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import AVFoundation
+
 
 class GameViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
@@ -29,7 +34,10 @@ class GameViewController: UIViewController {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        
     }
+    
+    
 
     override var shouldAutorotate: Bool {
         return true

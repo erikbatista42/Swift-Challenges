@@ -31,7 +31,6 @@ class GameScene: SKScene {
         let repeatCreations = SKAction.repeatForever(sequence)
         self.run(repeatCreations)
         
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -43,6 +42,8 @@ class GameScene: SKScene {
                 counter += 1
                 counts.text = "Score: \(counter)"
             }
+            
+//            let explosion = SCNParticleSystem(named: "StarParticle.scnp", inDirectory: nil)!
         }
     }
     
@@ -65,8 +66,9 @@ class GameScene: SKScene {
             square.name = "bubble"
         }
     
+    
     func countScore() {
-        counts.position = CGPoint(x: (view?.bounds.width)!/2, y: ((view?.bounds.height)!) - 20)
+        counts.position = CGPoint(x: (view?.bounds.width)!/2, y: ((view?.bounds.height)!) - 40)
         counts.fontSize = 25
         counts.text = "Score: \(counter)"
         addChild(counts)

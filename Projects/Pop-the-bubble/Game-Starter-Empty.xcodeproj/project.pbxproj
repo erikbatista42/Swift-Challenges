@@ -14,6 +14,8 @@
 		D8A7EBFA214AA9C40022E043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A7EBF9214AA9C40022E043 /* Assets.xcassets */; };
 		D8A7EBFD214AA9C40022E043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A7EBFB214AA9C40022E043 /* LaunchScreen.storyboard */; };
 		FEEE04EB215AFF2D000EF5B4 /* MakeBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE04EA215AFF2D000EF5B4 /* MakeBubble.swift */; };
+		FEEE04F0215B51F6000EF5B4 /* StarParticle.scnp in Resources */ = {isa = PBXBuildFile; fileRef = FEEE04EE215B51F6000EF5B4 /* StarParticle.scnp */; };
+		FEEE04F1215B51F6000EF5B4 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = FEEE04EF215B51F6000EF5B4 /* star.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D8A7EBFC214AA9C40022E043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8A7EBFE214AA9C40022E043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEEE04EA215AFF2D000EF5B4 /* MakeBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeBubble.swift; sourceTree = "<group>"; };
+		FEEE04EE215B51F6000EF5B4 /* StarParticle.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = StarParticle.scnp; sourceTree = "<group>"; };
+		FEEE04EF215B51F6000EF5B4 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		D8A7EBE0214AA9C30022E043 = {
 			isa = PBXGroup;
 			children = (
+				FEEE04EE215B51F6000EF5B4 /* StarParticle.scnp */,
+				FEEE04EF215B51F6000EF5B4 /* star.png */,
 				D8A7EBEB214AA9C30022E043 /* Game-Starter-Empty */,
 				D8A7EBEA214AA9C30022E043 /* Products */,
 			);
@@ -146,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A7EBF8214AA9C30022E043 /* Main.storyboard in Resources */,
+				FEEE04F1215B51F6000EF5B4 /* star.png in Resources */,
+				FEEE04F0215B51F6000EF5B4 /* StarParticle.scnp in Resources */,
 				D8A7EBFA214AA9C40022E043 /* Assets.xcassets in Resources */,
 				D8A7EBFD214AA9C40022E043 /* LaunchScreen.storyboard in Resources */,
 			);
