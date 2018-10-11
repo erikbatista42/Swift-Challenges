@@ -81,9 +81,9 @@
 		FE674B22216EE68800D57D4B /* SushiNeko */ = {
 			isa = PBXGroup;
 			children = (
-				FEC9F08D216F0B0800EE3EE3 /* sfx_swipe.sks */,
 				FEC9F091216F739300EE3EE3 /* assets.atlas */,
 				FE674B3C216EEEC800D57D4B /* Singletons */,
+				FEC9F08D216F0B0800EE3EE3 /* sfx_swipe.sks */,
 				FE674B25216EE68800D57D4B /* GameScene.sks */,
 				FEC9F08F216F72B800EE3EE3 /* AnimationActions.sks */,
 				FEC9F08B216F086F00EE3EE3 /* Character.swift */,
