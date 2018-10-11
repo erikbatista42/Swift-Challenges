@@ -21,6 +21,10 @@
 		FEC9F08E216F0B0800EE3EE3 /* sfx_swipe.sks in Resources */ = {isa = PBXBuildFile; fileRef = FEC9F08D216F0B0800EE3EE3 /* sfx_swipe.sks */; };
 		FEC9F090216F72B800EE3EE3 /* AnimationActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = FEC9F08F216F72B800EE3EE3 /* AnimationActions.sks */; };
 		FEC9F092216F739300EE3EE3 /* assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = FEC9F091216F739300EE3EE3 /* assets.atlas */; };
+		FEC9F098216F744800EE3EE3 /* gonnaFlyNow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC9F093216F744700EE3EE3 /* gonnaFlyNow.mp3 */; };
+		FEC9F099216F744800EE3EE3 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = FEC9F094216F744700EE3EE3 /* Contents.json */; };
+		FEC9F09A216F744800EE3EE3 /* boxingBell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC9F095216F744700EE3EE3 /* boxingBell.mp3 */; };
+		FEC9F09C216F744800EE3EE3 /* victoryGong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC9F097216F744800EE3EE3 /* victoryGong.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		FEC9F08D216F0B0800EE3EE3 /* sfx_swipe.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sfx_swipe.sks; sourceTree = "<group>"; };
 		FEC9F08F216F72B800EE3EE3 /* AnimationActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnimationActions.sks; sourceTree = "<group>"; };
 		FEC9F091216F739300EE3EE3 /* assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = assets.atlas; sourceTree = "<group>"; };
+		FEC9F093216F744700EE3EE3 /* gonnaFlyNow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gonnaFlyNow.mp3; sourceTree = "<group>"; };
+		FEC9F094216F744700EE3EE3 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		FEC9F095216F744700EE3EE3 /* boxingBell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = boxingBell.mp3; sourceTree = "<group>"; };
+		FEC9F097216F744800EE3EE3 /* victoryGong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = victoryGong.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,11 @@
 				FE674B29216EE68800D57D4B /* GameScene.swift */,
 				FEC9F089216F04CE00EE3EE3 /* SushiPiece.swift */,
 				FE674B2B216EE68800D57D4B /* GameViewController.swift */,
+				FEC9F095216F744700EE3EE3 /* boxingBell.mp3 */,
+				FEC9F094216F744700EE3EE3 /* Contents.json */,
+				FEC9F093216F744700EE3EE3 /* gonnaFlyNow.mp3 */,
+				FE674B3D216EEFFD00D57D4B /* sfx_swipe.caf */,
+				FEC9F097216F744800EE3EE3 /* victoryGong.mp3 */,
 				FE674B3B216EEEA200D57D4B /* Resources */,
 			);
 			path = SushiNeko;
@@ -112,7 +125,6 @@
 		FE674B3E216EF00300D57D4B /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				FE674B3D216EEFFD00D57D4B /* sfx_swipe.caf */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -180,7 +192,11 @@
 				FEC9F092216F739300EE3EE3 /* assets.atlas in Resources */,
 				FEC9F090216F72B800EE3EE3 /* AnimationActions.sks in Resources */,
 				FE674B26216EE68800D57D4B /* GameScene.sks in Resources */,
+				FEC9F099216F744800EE3EE3 /* Contents.json in Resources */,
+				FEC9F09A216F744800EE3EE3 /* boxingBell.mp3 in Resources */,
 				FE674B31216EE68A00D57D4B /* Assets.xcassets in Resources */,
+				FEC9F09C216F744800EE3EE3 /* victoryGong.mp3 in Resources */,
+				FEC9F098216F744800EE3EE3 /* gonnaFlyNow.mp3 in Resources */,
 				FE674B34216EE68A00D57D4B /* LaunchScreen.storyboard in Resources */,
 				FE674B28216EE68800D57D4B /* Actions.sks in Resources */,
 			);
