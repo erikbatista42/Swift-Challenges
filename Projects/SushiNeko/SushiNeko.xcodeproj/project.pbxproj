@@ -15,6 +15,7 @@
 		FE674B2F216EE68800D57D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE674B2D216EE68800D57D4B /* Main.storyboard */; };
 		FE674B31216EE68A00D57D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE674B30216EE68A00D57D4B /* Assets.xcassets */; };
 		FE674B34216EE68A00D57D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE674B32216EE68A00D57D4B /* LaunchScreen.storyboard */; };
+		FE674B40216EF02900D57D4B /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE674B3F216EF02900D57D4B /* MSButtonNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		FE674B30216EE68A00D57D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE674B33216EE68A00D57D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE674B35216EE68A00D57D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE674B3D216EEFFD00D57D4B /* sfx_swipe.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_swipe.caf; sourceTree = "<group>"; };
+		FE674B3F216EF02900D57D4B /* MSButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 		FE674B17216EE68800D57D4B = {
 			isa = PBXGroup;
 			children = (
+				FE674B3F216EF02900D57D4B /* MSButtonNode.swift */,
 				FE674B22216EE68800D57D4B /* SushiNeko */,
 				FE674B21216EE68800D57D4B /* Products */,
 			);
@@ -73,6 +77,7 @@
 		FE674B3B216EEEA200D57D4B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FE674B3E216EF00300D57D4B /* Sounds */,
 				FE674B30216EE68A00D57D4B /* Assets.xcassets */,
 				FE674B2D216EE68800D57D4B /* Main.storyboard */,
 				FE674B32216EE68A00D57D4B /* LaunchScreen.storyboard */,
@@ -87,6 +92,14 @@
 				FE674B23216EE68800D57D4B /* AppDelegate.swift */,
 			);
 			path = Singletons;
+			sourceTree = "<group>";
+		};
+		FE674B3E216EF00300D57D4B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FE674B3D216EEFFD00D57D4B /* sfx_swipe.caf */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +178,7 @@
 				FE674B2A216EE68800D57D4B /* GameScene.swift in Sources */,
 				FE674B2C216EE68800D57D4B /* GameViewController.swift in Sources */,
 				FE674B24216EE68800D57D4B /* AppDelegate.swift in Sources */,
+				FE674B40216EF02900D57D4B /* MSButtonNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFUU36AARG;
-				INFOPLIST_FILE = SushiNeko/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SushiNeko/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFUU36AARG;
-				INFOPLIST_FILE = SushiNeko/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SushiNeko/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
