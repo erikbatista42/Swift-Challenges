@@ -60,17 +60,33 @@
 		FE674B22216EE68800D57D4B /* SushiNeko */ = {
 			isa = PBXGroup;
 			children = (
-				FE674B23216EE68800D57D4B /* AppDelegate.swift */,
+				FE674B3C216EEEC800D57D4B /* Singletons */,
 				FE674B25216EE68800D57D4B /* GameScene.sks */,
 				FE674B27216EE68800D57D4B /* Actions.sks */,
 				FE674B29216EE68800D57D4B /* GameScene.swift */,
 				FE674B2B216EE68800D57D4B /* GameViewController.swift */,
-				FE674B2D216EE68800D57D4B /* Main.storyboard */,
+				FE674B3B216EEEA200D57D4B /* Resources */,
+			);
+			path = SushiNeko;
+			sourceTree = "<group>";
+		};
+		FE674B3B216EEEA200D57D4B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				FE674B30216EE68A00D57D4B /* Assets.xcassets */,
+				FE674B2D216EE68800D57D4B /* Main.storyboard */,
 				FE674B32216EE68A00D57D4B /* LaunchScreen.storyboard */,
 				FE674B35216EE68A00D57D4B /* Info.plist */,
 			);
-			path = SushiNeko;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE674B3C216EEEC800D57D4B /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				FE674B23216EE68800D57D4B /* AppDelegate.swift */,
+			);
+			path = Singletons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
