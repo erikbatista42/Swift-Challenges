@@ -10,8 +10,6 @@ import SpriteKit
 import GameplayKit
 import UIKit
 
-
-
 class GameScene: SKScene {
     let squareSize = CGSize(width: 40, height: 40)
     var counter = 0
@@ -26,7 +24,6 @@ class GameScene: SKScene {
         // position score label, add it to the scene
         counts.position = CGPoint(x: self.size.width / 2, y: self.size.height - 35)
         addChild(counts)
-        
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -35,7 +32,6 @@ class GameScene: SKScene {
             if counts.actualScore < 0 {
                 gameOver()
             }
-            
             // check if we need to make a box
             if counter <= 0 {
                 makeSquare()
@@ -78,10 +74,10 @@ class GameScene: SKScene {
     }
     
     func makeSquare() {
-
         let color = UIColor(hue: CGFloat.random(in: 0...1), saturation: 1, brightness: 1, alpha: 1)
 
         let square = Box(squareSize: squareSize, color: color, name: "box", screenSize: self.size)
+        
         addChild(square)
         zoom(square)
         }
@@ -93,7 +89,7 @@ class GameScene: SKScene {
 
             self.counts.updateScore(score: -50)
         }
-    } 
+    }
     
     func countScore() {
         counts.position = CGPoint(x: (view?.bounds.width)!/2, y: ((view?.bounds.height)!) - 40)
