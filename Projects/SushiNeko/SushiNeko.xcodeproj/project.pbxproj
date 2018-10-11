@@ -16,6 +16,7 @@
 		FE674B31216EE68A00D57D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE674B30216EE68A00D57D4B /* Assets.xcassets */; };
 		FE674B34216EE68A00D57D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE674B32216EE68A00D57D4B /* LaunchScreen.storyboard */; };
 		FE674B40216EF02900D57D4B /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE674B3F216EF02900D57D4B /* MSButtonNode.swift */; };
+		FEC9F08A216F04CE00EE3EE3 /* SushiPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC9F089216F04CE00EE3EE3 /* SushiPiece.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		FE674B35216EE68A00D57D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE674B3D216EEFFD00D57D4B /* sfx_swipe.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_swipe.caf; sourceTree = "<group>"; };
 		FE674B3F216EF02900D57D4B /* MSButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
+		FEC9F089216F04CE00EE3EE3 /* SushiPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiPiece.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				FE674B3F216EF02900D57D4B /* MSButtonNode.swift */,
 				FE674B27216EE68800D57D4B /* Actions.sks */,
 				FE674B29216EE68800D57D4B /* GameScene.swift */,
+				FEC9F089216F04CE00EE3EE3 /* SushiPiece.swift */,
 				FE674B2B216EE68800D57D4B /* GameViewController.swift */,
 				FE674B3B216EEEA200D57D4B /* Resources */,
 			);
@@ -178,6 +181,7 @@
 				FE674B2A216EE68800D57D4B /* GameScene.swift in Sources */,
 				FE674B2C216EE68800D57D4B /* GameViewController.swift in Sources */,
 				FE674B24216EE68800D57D4B /* AppDelegate.swift in Sources */,
+				FEC9F08A216F04CE00EE3EE3 /* SushiPiece.swift in Sources */,
 				FE674B40216EF02900D57D4B /* MSButtonNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
