@@ -10,44 +10,56 @@ import SpriteKit
 
 class SushiPiece: SKSpriteNode {
     
-    /* Chopsticks objects */
+    //the chopsticks
     var rightChopstick: SKSpriteNode!
     var leftChopstick: SKSpriteNode!
     
-    /* Sushi type */
+    //sushi type?
     var side: Side = .none {
         didSet {
             switch side {
             case .left:
-                /* Show left chopstick */
+                //show the chopstick
                 leftChopstick.isHidden = false
             case .right:
-                /* Show right chopstick */
                 rightChopstick.isHidden = false
             case .none:
-                /* Hide all chopsticks */
+                //hise the chopsticks
                 leftChopstick.isHidden = true
                 rightChopstick.isHidden = true
             }
         }
     }
     
-    /* You are required to implement this for your subclass to work */
     override init(texture: SKTexture?, color: UIColor, size: CGSize) {
         super.init(texture: texture, color: color, size: size)
     }
     
-    /* You are required to implement this for your subclass to work */
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     func connectChopsticks() {
-        /* Connect our child chopstick nodes */
+        //connecting chopsticks to child chopstick nodes
         rightChopstick = childNode(withName: "rightChopstick") as! SKSpriteNode
         leftChopstick = childNode(withName: "leftChopstick") as! SKSpriteNode
-        /* Set the default side */
+        //set default
         side = .none
     }
-    
+    func flip(_ side: Side) {
+        //flip sushi
+        var actionName: String = ""
+        if side == .left {
+            actionName = "flipRight"
+        } else if side == .right {
+            actionName = "flipLeft"
+        }
+        //load action
+        let flip = SKAction(named: actionName)!
+        //removing node action
+        let remove = SKAction.removeFromParent()
+        //create a cat-sushi-flipping-off sequence
+        let sequence = SKAction.sequence([flip, remove])
+        run(sequence)
+    }
 }

@@ -10,6 +10,8 @@ import SpriteKit
 
 class Character: SKSpriteNode {
     
+    let punch = SKAction(named: "Punch")!
+    
     /* Character side */
     var side: Side = .left {
         didSet {
