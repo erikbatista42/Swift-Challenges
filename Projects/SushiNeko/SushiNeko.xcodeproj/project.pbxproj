@@ -47,7 +47,6 @@
 		FE674B17216EE68800D57D4B = {
 			isa = PBXGroup;
 			children = (
-				FE674B3F216EF02900D57D4B /* MSButtonNode.swift */,
 				FE674B22216EE68800D57D4B /* SushiNeko */,
 				FE674B21216EE68800D57D4B /* Products */,
 			);
@@ -66,6 +65,7 @@
 			children = (
 				FE674B3C216EEEC800D57D4B /* Singletons */,
 				FE674B25216EE68800D57D4B /* GameScene.sks */,
+				FE674B3F216EF02900D57D4B /* MSButtonNode.swift */,
 				FE674B27216EE68800D57D4B /* Actions.sks */,
 				FE674B29216EE68800D57D4B /* GameScene.swift */,
 				FE674B2B216EE68800D57D4B /* GameViewController.swift */,
