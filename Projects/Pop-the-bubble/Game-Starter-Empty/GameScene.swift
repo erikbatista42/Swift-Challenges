@@ -69,7 +69,7 @@ class GameScene: SKScene {
             if let touch = touches.first {
                 let touchedNode = self.atPoint(touch.location(in: self))
                 if touchedNode.name == "box" {
-                    // remove the box from the screen and give the player some points
+                    // remove the box from the screen and give the player sum points
                     touchedNode.removeFromParent()
                     counts.updateScore(score: 50)
                 }
@@ -80,13 +80,9 @@ class GameScene: SKScene {
     func makeSquare() {
 
         let color = UIColor(hue: CGFloat.random(in: 0...1), saturation: 1, brightness: 1, alpha: 1)
-        
-        // make a new box
+
         let square = Box(squareSize: squareSize, color: color, name: "box", screenSize: self.size)
-        
-        // add the box to the screen
         addChild(square)
-        
         zoom(square)
         }
     
@@ -97,8 +93,7 @@ class GameScene: SKScene {
 
             self.counts.updateScore(score: -50)
         }
-    }
-    
+    } 
     
     func countScore() {
         counts.position = CGPoint(x: (view?.bounds.width)!/2, y: ((view?.bounds.height)!) - 40)
