@@ -15,8 +15,6 @@ class GameScene: SKScene {
     var counter = 0
     let counts = SKLabelNode(fontNamed: "Helvetica")
     
-    
-  
     override func didMove(to view: SKView) {
         countScore()
         
@@ -48,19 +46,19 @@ class GameScene: SKScene {
     }
     
     func makeSquare() {
-        
+
             let size = CGSize(width: 50, height: 50)
         let rainbowBox = SKTexture(image: UIImage(named: "rainbowBox")!)
             let square = SKSpriteNode(texture: rainbowBox, color: .magenta, size: size)
                 // bounds is the size
             square.position.x = CGFloat(arc4random_uniform(UInt32(view?.bounds.width ?? 0)))
             square.position.y = 0
-        
+
             let moveUp = SKAction.moveTo(y: (view?.bounds.height)!, duration: 2)
             let removeBubble = SKAction.removeFromParent()
-        
+
             let sequence = SKAction.sequence([moveUp,removeBubble])
-        
+
             addChild(square)
             square.run(sequence)
             square.name = "bubble"
