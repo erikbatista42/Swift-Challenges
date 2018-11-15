@@ -15,6 +15,8 @@
 		FE8B968F219D4EA3009DE6D8 /* HabitsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8B968D219D4EA3009DE6D8 /* HabitsTableViewController.xib */; };
 		FE8B9691219D54E8009DE6D8 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B9690219D54E8009DE6D8 /* Habit.swift */; };
 		FE8B9693219D5624009DE6D8 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B9692219D5624009DE6D8 /* DateExtensions.swift */; };
+		FE8B9698219D5CEC009DE6D8 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B9696219D5CEC009DE6D8 /* HabitTableViewCell.swift */; };
+		FE8B9699219D5CEC009DE6D8 /* HabitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8B9697219D5CEC009DE6D8 /* HabitTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FE8B968D219D4EA3009DE6D8 /* HabitsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitsTableViewController.xib; sourceTree = "<group>"; };
 		FE8B9690219D54E8009DE6D8 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		FE8B9692219D5624009DE6D8 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		FE8B9696219D5CEC009DE6D8 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
+		FE8B9697219D5CEC009DE6D8 /* HabitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				FE8B968C219D4EA3009DE6D8 /* HabitsTableViewController.swift */,
 				FE8B968D219D4EA3009DE6D8 /* HabitsTableViewController.xib */,
+				FE8B9696219D5CEC009DE6D8 /* HabitTableViewCell.swift */,
+				FE8B9697219D5CEC009DE6D8 /* HabitTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 			files = (
 				FE8B967E219D0816009DE6D8 /* LaunchScreen.storyboard in Resources */,
 				FE8B968F219D4EA3009DE6D8 /* HabitsTableViewController.xib in Resources */,
+				FE8B9699219D5CEC009DE6D8 /* HabitTableViewCell.xib in Resources */,
 				FE8B967B219D0816009DE6D8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +163,7 @@
 				FE8B9693219D5624009DE6D8 /* DateExtensions.swift in Sources */,
 				FE8B968B219D4B48009DE6D8 /* UIViewControllerExtensions.swift in Sources */,
 				FE8B9691219D54E8009DE6D8 /* Habit.swift in Sources */,
+				FE8B9698219D5CEC009DE6D8 /* HabitTableViewCell.swift in Sources */,
 				FE8B9674219D0814009DE6D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
