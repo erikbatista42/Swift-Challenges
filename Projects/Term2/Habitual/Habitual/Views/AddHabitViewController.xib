@@ -19,9 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NUV-Kw-jwX">
-                    <rect key="frame" x="16" y="20" width="343" height="553"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NUV-Kw-jwX">
+                    <rect key="frame" x="16" y="70" width="343" height="503"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pw1-NY-aTy">
                         <size key="itemSize" width="50" height="50"/>
@@ -34,16 +33,27 @@
                         <outlet property="delegate" destination="-1" id="VEL-P9-YEW"/>
                     </connections>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4S-tr-vr5">
-                    <rect key="frame" x="16" y="581" width="343" height="49"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4S-tr-vr5">
+                    <rect key="frame" x="16" y="597" width="344" height="50"/>
                     <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="uQx-0B-BjF"/>
+                    </constraints>
                     <state key="normal" title="Pick Photo">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="A4S-tr-vr5" firstAttribute="top" secondItem="NUV-Kw-jwX" secondAttribute="bottom" constant="24" id="17L-sS-Pr3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NUV-Kw-jwX" secondAttribute="trailing" constant="16" id="1Et-0b-9Nm"/>
+                <constraint firstItem="A4S-tr-vr5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9vv-kK-WFc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="A4S-tr-vr5" secondAttribute="bottom" constant="20" id="Ltq-NT-BaG"/>
+                <constraint firstItem="NUV-Kw-jwX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Xnj-aO-bME"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A4S-tr-vr5" secondAttribute="trailing" constant="15" id="bzA-HI-BZk"/>
+                <constraint firstItem="NUV-Kw-jwX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hBx-mB-CUm"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>

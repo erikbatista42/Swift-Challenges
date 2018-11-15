@@ -86,14 +86,22 @@
 		FE8B9689219D0B05009DE6D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FE8B968C219D4EA3009DE6D8 /* HabitsTableViewController.swift */,
-				FE8B968D219D4EA3009DE6D8 /* HabitsTableViewController.xib */,
+				FE8B96A0219DF176009DE6D8 /* HabitsTableViewController */,
 				FE8B9696219D5CEC009DE6D8 /* HabitTableViewCell.swift */,
 				FE8B9697219D5CEC009DE6D8 /* HabitTableViewCell.xib */,
 				FE8B969C219DEEFD009DE6D8 /* AddHabitViewController.swift */,
 				FE8B969D219DEEFD009DE6D8 /* AddHabitViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FE8B96A0219DF176009DE6D8 /* HabitsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE8B968C219D4EA3009DE6D8 /* HabitsTableViewController.swift */,
+				FE8B968D219D4EA3009DE6D8 /* HabitsTableViewController.xib */,
+			);
+			path = HabitsTableViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
