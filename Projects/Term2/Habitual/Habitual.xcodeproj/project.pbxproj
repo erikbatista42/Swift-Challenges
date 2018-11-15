@@ -11,8 +11,8 @@
 		FE8B967B219D0816009DE6D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE8B967A219D0816009DE6D8 /* Assets.xcassets */; };
 		FE8B967E219D0816009DE6D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8B967C219D0816009DE6D8 /* LaunchScreen.storyboard */; };
 		FE8B968B219D4B48009DE6D8 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B968A219D4B48009DE6D8 /* UIViewControllerExtensions.swift */; };
-		FE8B968E219D4EA3009DE6D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B968C219D4EA3009DE6D8 /* MainViewController.swift */; };
-		FE8B968F219D4EA3009DE6D8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8B968D219D4EA3009DE6D8 /* MainViewController.xib */; };
+		FE8B968E219D4EA3009DE6D8 /* HabitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B968C219D4EA3009DE6D8 /* HabitsTableViewController.swift */; };
+		FE8B968F219D4EA3009DE6D8 /* HabitsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8B968D219D4EA3009DE6D8 /* HabitsTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		FE8B967D219D0816009DE6D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE8B967F219D0816009DE6D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE8B968A219D4B48009DE6D8 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		FE8B968C219D4EA3009DE6D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		FE8B968D219D4EA3009DE6D8 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		FE8B968C219D4EA3009DE6D8 /* HabitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsTableViewController.swift; sourceTree = "<group>"; };
+		FE8B968D219D4EA3009DE6D8 /* HabitsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitsTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +69,8 @@
 		FE8B9689219D0B05009DE6D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FE8B968C219D4EA3009DE6D8 /* MainViewController.swift */,
-				FE8B968D219D4EA3009DE6D8 /* MainViewController.xib */,
+				FE8B968C219D4EA3009DE6D8 /* HabitsTableViewController.swift */,
+				FE8B968D219D4EA3009DE6D8 /* HabitsTableViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE8B967E219D0816009DE6D8 /* LaunchScreen.storyboard in Resources */,
-				FE8B968F219D4EA3009DE6D8 /* MainViewController.xib in Resources */,
+				FE8B968F219D4EA3009DE6D8 /* HabitsTableViewController.xib in Resources */,
 				FE8B967B219D0816009DE6D8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE8B968E219D4EA3009DE6D8 /* MainViewController.swift in Sources */,
+				FE8B968E219D4EA3009DE6D8 /* HabitsTableViewController.swift in Sources */,
 				FE8B968B219D4B48009DE6D8 /* UIViewControllerExtensions.swift in Sources */,
 				FE8B9674219D0814009DE6D8 /* AppDelegate.swift in Sources */,
 			);

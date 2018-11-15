@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         // Create an instance of the main view controller
         let navigationController = UINavigationController()
-        let mainViewController = MainViewController.instantiate()
+        let mainViewController = HabitsTableViewController.instantiate()
         navigationController.setViewControllers([mainViewController], animated: false)
             // Tell the window to load the main controller as it's root view
         window!.rootViewController = navigationController
