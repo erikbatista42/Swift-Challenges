@@ -16,10 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        window = UIWindow()
-        let viewController = ViewController()
-        window?.rootViewController = viewController
-        window?.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        // Create an instance of the main view controller
+        let navigationController = UINavigationController()
+        let mainViewController = MainViewController.instantiate()
+        navigationController.setViewControllers([mainViewController], animated: false)
+            // Tell the window to load the main controller as it's root view
+        window!.rootViewController = navigationController
+        window!.makeKeyAndVisible()
         return true
     }
 
