@@ -13,7 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func pressAddEntry(_ sender: UIBarButtonItem) {
-        print(123)
+        let now = Date()
+        let newMood = MoodEntry(mood: .amazing, date: now)
+        entries.insert(newMood, at: 0)
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
     }
     
     var entries: [MoodEntry] = []
@@ -35,6 +38,11 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedEntry = entries[indexPath.row]
+        print("Selected mood was \(selectedEntry.mood.stringValue)")
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entries.count
