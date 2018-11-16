@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func pressAddEntry(_ sender: UIBarButtonItem) {
+        print(123)
+    }
+    
     var entries: [MoodEntry] = []
 
     override func viewDidLoad() {
