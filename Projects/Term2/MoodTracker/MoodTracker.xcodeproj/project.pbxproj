@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE89D5E321B11466005CE258 /* MoodDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89D5E221B11466005CE258 /* MoodDetailedViewController.swift */; };
 		FE8B96D1219E406D009DE6D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B96D0219E406D009DE6D8 /* AppDelegate.swift */; };
 		FE8B96D3219E406D009DE6D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B96D2219E406D009DE6D8 /* ViewController.swift */; };
 		FE8B96D6219E406D009DE6D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8B96D4219E406D009DE6D8 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE89D5E221B11466005CE258 /* MoodDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDetailedViewController.swift; sourceTree = "<group>"; };
 		FE8B96CD219E406D009DE6D8 /* MoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE8B96D0219E406D009DE6D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE8B96D2219E406D009DE6D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				FE8B96D2219E406D009DE6D8 /* ViewController.swift */,
+				FE89D5E221B11466005CE258 /* MoodDetailedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE8B96D3219E406D009DE6D8 /* ViewController.swift in Sources */,
+				FE89D5E321B11466005CE258 /* MoodDetailedViewController.swift in Sources */,
 				FE8B96D1219E406D009DE6D8 /* AppDelegate.swift in Sources */,
 				FE8B96E6219E40F3009DE6D8 /* MoodEntry.swift in Sources */,
 				FEA21842219F630C00C36E4F /* MoodEntryTableViewCell.swift in Sources */,
