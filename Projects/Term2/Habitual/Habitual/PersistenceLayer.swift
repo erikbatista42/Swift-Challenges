@@ -97,8 +97,8 @@ struct PersistenceLayer {
         }
         
         // Line 6
-        if updatedHabit.currentStreak > updatedHabit.bestStreak {
-            updatedHabit.bestStreak = updatedHabit.currentStreak
+        if updatedHabit.currentStreak > updatedHabit.bestStreakLabel {
+            updatedHabit.bestStreakLabel = updatedHabit.currentStreak
         }
         
         // Line 7

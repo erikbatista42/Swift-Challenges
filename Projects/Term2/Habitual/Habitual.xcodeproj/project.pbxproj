@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE1F8F9F21C4100E00F71867 /* HabitImageViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F8F9D21C4100E00F71867 /* HabitImageViewCollectionViewCell.swift */; };
+		FE1F8FA521C4110700F71867 /* ConfirmHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F8FA321C4110700F71867 /* ConfirmHabitViewController.swift */; };
+		FE1F8FA621C4110700F71867 /* ConfirmHabitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1F8FA421C4110700F71867 /* ConfirmHabitViewController.xib */; };
+		FE1F8FA921C4124000F71867 /* HabitDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1F8FA721C4124000F71867 /* HabitDetailedViewController.swift */; };
+		FE1F8FAA21C4124000F71867 /* HabitDetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1F8FA821C4124000F71867 /* HabitDetailedViewController.xib */; };
+		FE1F8FAB21C47B1B00F71867 /* HabitImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1F8F9E21C4100E00F71867 /* HabitImageCollectionViewCell.xib */; };
 		FE8B9674219D0814009DE6D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B9673219D0814009DE6D8 /* AppDelegate.swift */; };
 		FE8B967B219D0816009DE6D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE8B967A219D0816009DE6D8 /* Assets.xcassets */; };
 		FE8B967E219D0816009DE6D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8B967C219D0816009DE6D8 /* LaunchScreen.storyboard */; };
@@ -23,6 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE1F8F9D21C4100E00F71867 /* HabitImageViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitImageViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE1F8F9E21C4100E00F71867 /* HabitImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		FE1F8FA321C4110700F71867 /* ConfirmHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmHabitViewController.swift; sourceTree = "<group>"; };
+		FE1F8FA421C4110700F71867 /* ConfirmHabitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmHabitViewController.xib; sourceTree = "<group>"; };
+		FE1F8FA721C4124000F71867 /* HabitDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailedViewController.swift; sourceTree = "<group>"; };
+		FE1F8FA821C4124000F71867 /* HabitDetailedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitDetailedViewController.xib; sourceTree = "<group>"; };
 		FE8B9670219D0814009DE6D8 /* Habitual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE8B9673219D0814009DE6D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE8B967A219D0816009DE6D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +103,12 @@
 				FE8B9697219D5CEC009DE6D8 /* HabitTableViewCell.xib */,
 				FE8B969C219DEEFD009DE6D8 /* AddHabitViewController.swift */,
 				FE8B969D219DEEFD009DE6D8 /* AddHabitViewController.xib */,
+				FE1F8F9D21C4100E00F71867 /* HabitImageViewCollectionViewCell.swift */,
+				FE1F8F9E21C4100E00F71867 /* HabitImageCollectionViewCell.xib */,
+				FE1F8FA321C4110700F71867 /* ConfirmHabitViewController.swift */,
+				FE1F8FA421C4110700F71867 /* ConfirmHabitViewController.xib */,
+				FE1F8FA721C4124000F71867 /* HabitDetailedViewController.swift */,
+				FE1F8FA821C4124000F71867 /* HabitDetailedViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +182,9 @@
 			files = (
 				FE8B967E219D0816009DE6D8 /* LaunchScreen.storyboard in Resources */,
 				FE8B969F219DEEFD009DE6D8 /* AddHabitViewController.xib in Resources */,
+				FE1F8FAB21C47B1B00F71867 /* HabitImageCollectionViewCell.xib in Resources */,
+				FE1F8FA621C4110700F71867 /* ConfirmHabitViewController.xib in Resources */,
+				FE1F8FAA21C4124000F71867 /* HabitDetailedViewController.xib in Resources */,
 				FE8B968F219D4EA3009DE6D8 /* HabitsTableViewController.xib in Resources */,
 				FE8B9699219D5CEC009DE6D8 /* HabitTableViewCell.xib in Resources */,
 				FE8B967B219D0816009DE6D8 /* Assets.xcassets in Resources */,
@@ -177,11 +198,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1F8F9F21C4100E00F71867 /* HabitImageViewCollectionViewCell.swift in Sources */,
 				FE8B968E219D4EA3009DE6D8 /* HabitsTableViewController.swift in Sources */,
+				FE1F8FA921C4124000F71867 /* HabitDetailedViewController.swift in Sources */,
 				FE8B9693219D5624009DE6D8 /* DateExtensions.swift in Sources */,
 				FE8B968B219D4B48009DE6D8 /* UIViewControllerExtensions.swift in Sources */,
 				FE8B969B219DE69B009DE6D8 /* PersistenceLayer.swift in Sources */,
 				FE8B9691219D54E8009DE6D8 /* Habit.swift in Sources */,
+				FE1F8FA521C4110700F71867 /* ConfirmHabitViewController.swift in Sources */,
 				FE8B9698219D5CEC009DE6D8 /* HabitTableViewCell.swift in Sources */,
 				FE8B9674219D0814009DE6D8 /* AppDelegate.swift in Sources */,
 				FE8B969E219DEEFD009DE6D8 /* AddHabitViewController.swift in Sources */,
