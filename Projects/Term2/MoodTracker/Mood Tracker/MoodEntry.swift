@@ -1,17 +1,15 @@
 //
 //  MoodEntry.swift
-//  MoodTracker
+//  Mood Tracker
 //
 //  Created by luxury on 11/15/18.
 //  Copyright © 2018 luxury. All rights reserved.
 //
 
 import Foundation
-import UIKit.UIColor
+import UIKit
 
 struct MoodEntry {
-    var mood: Mood
-    var date: Date
     
     enum Mood: Int {
         case none
@@ -56,7 +54,7 @@ struct MoodEntry {
         }
     }
     
-    
+    var mood: Mood
+    var date: Date
     
 }
-
