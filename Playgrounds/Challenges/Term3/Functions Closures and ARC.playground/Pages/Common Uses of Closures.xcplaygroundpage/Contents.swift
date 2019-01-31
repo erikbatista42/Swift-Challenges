@@ -176,31 +176,60 @@ let namesCombined = guestList.reduce("") { (sentence, aGuest) -> String in
 //sort these numbers
 let numbersToSort = [2, 4, 4, 2, 1, 0]
 
+numbersToSort.sorted { (first, second) -> Bool in
+    first < second
+}
+
 
 //sort the guests by name
 let guestsToSort = [sam, eric, sara, charlie]
 
+let nameSort = guestsToSort.sorted { (guestA, guestB) -> Bool in
+    return guestA.name < guestB.name
+}
 
 //sort the guests by age, but in descending order (youngest at the front of the array)
-
-
+let namesSorted = guestsToSort.sorted { (guestA, guestB) -> Bool in
+    return guestA.age < guestB.age
+}
 //filter the guests to only include guests younger than 18 years
-
+let lessThanEighteen = guestsToSort.filter { (guestA) -> Bool in
+    return guestA.age < 18
+}
 
 //filter the numbers to only include even numbers
 let numbersToFilter = [2, 1, 1, 5, 6, 7, 10]
+
+let evenNums = numbersToFilter.filter { (num) -> Bool in
+    return num % 2 == 0
+}
 
 
 //map the numbers to be double their values (e.g. 5 gets mapped to 10)
 let numbersToDouble = [2, 4, 6, 8]
 
+let powerOfTwo = numbersToDouble.map { (num) -> Int in
+    return num * 2
+}
+
 
 //map the numbers into strings
 let numbersToMapIntoStrings = [2, 4, 5, 1, 2, 2]
 
+let numStr = numbersToMapIntoStrings.map { (num) -> String in
+    return String(num)
+}
+
 
 //reduce the numbers into a sum, but exclude negative numbers from the sum. Thus, your reduce closure should reduce this array to equal 10
 let numbersToSum = [-2, -5, -4, 5, -5, 5]
+
+let solution = numbersToSum.reduce(0) { (result, num) -> Int in
+    if num >= 0 {
+        return result + num
+    }
+    return result
+}
 
 
 /*:
