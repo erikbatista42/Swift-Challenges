@@ -89,8 +89,55 @@ add(newGuest: eric) { print("There are \($0 - 1) guests ahead of me") }
  Rewrite your sorting closure to be a single line of code
  */
 
+let sam = Guest(name: "Sam", age: 17)
+let sara = Guest(name: "Sara", age: 23)
+let charlie = Guest(name: "Charlie", age: 18)
 
 //copy and paste your sorting closure here and rewrite it to be a single line of code
+
+//sort these numbers
+let numbersToSort = [2, 4, 4, 2, 1, 0]
+
+let sortedNums = numbersToSort.sorted{ $0 < $1 }
+print(sortedNums)
+
+//sort the guests by name
+let guestsToSort = [sam, eric, sara, charlie]
+
+let nameSort = guestsToSort.sorted { $0.name < $1.name }
+print(nameSort)
+
+//sort the guests by age, but in descending order (youngest at the front of the array)
+let namesSorted = guestsToSort.sorted{ $0.age < $1.age }
+
+//filter the guests to only include guests younger than 18 years
+let lessThanEighteen = guestsToSort.filter { $0.age < 18 }
+print(lessThanEighteen)
+
+//filter the numbers to only include even numbers
+let numbersToFilter = [2, 1, 1, 5, 6, 7, 10]
+
+let evenNums = numbersToFilter.filter{ $0 % 2 == 0 }
+
+//map the numbers to be double their values (e.g. 5 gets mapped to 10)
+let numbersToDouble = [2, 4, 6, 8]
+
+let powerOfTwo = numbersToDouble.map{ $0 * 2 }
+
+//map the numbers into strings
+let numbersToMapIntoStrings = [2, 4, 5, 1, 2, 2]
+
+let numStr = numbersToMapIntoStrings.map{ String($0) }
+
+//reduce the numbers into a sum, but exclude negative numbers from the sum. Thus, your reduce closure should reduce this array to equal 10
+let numbersToSumm = [-2, -5, -4, 5, -5, 5]
+
+let solution = numbersToSumm.reduce(0) { (result, num) -> Int in
+    if num >= 0 {
+        return result + num
+    }
+    return result
+}
 
 
 /*:
