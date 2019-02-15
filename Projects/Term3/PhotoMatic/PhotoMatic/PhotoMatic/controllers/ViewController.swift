@@ -13,9 +13,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet var collectionView: UICollectionView!
     
     //TODO: Insert your API Key here
-    private let APIKey = "0000000000000000000000000000000000"
-    private let baseURLString = "xxxxxxxxxx"
-    private let flickrMethod = "xxxxxxx"
+    private let APIKey = "49f807ce419200f804effb37558ef769"
+    private let baseURLString = "https://api.flickr.com/services/rest"
+    private let flickrMethod = "flickr.interestingness.getList"
     
     let session: URLSession = {
         let config = URLSessionConfiguration.default
