@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -28,10 +28,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return formatter
     }()
     
-    var photos: [Photo] = []
+    var photos: [PhotoMetadata] = []
     
     enum PhotoFetchResult {
-        case success([Photo])
+        case success([PhotoMetadata])
         case failure(Error)
     }
     
@@ -57,46 +57,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.dataSource = self
         collectionView.delegate = self
         
-         reloadDataSource()
+        reloadDataSource()
     }
     
     
-    //MARK: UICollectionViewDataSource delegate functions
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let identifier = "PhotoCell"
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier,
-                                               for: indexPath) as! PhotoCell
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell,
-                        forItemAt indexPath: IndexPath) {
-        
-        let photo = photos[indexPath.row]
-        
-        // Download the image data...
-        self.fetchImage(for: photo, completion: { (result) -> Void in
-            
-            guard let photoIndex = self.photos.index(where: { $0 === photo }),
-                case let .success(image) = result else {
-                    return
-            }
-            
-            let photoIndexPath = IndexPath(item: photoIndex, section: 0)
-            
-            // Update  cell when the request finishes
-            if let cell = self.collectionView.cellForItem(at: photoIndexPath)
-                as? PhotoCell {
-                cell.updateCell(with: image)
-            }
-        })
-    }
+   
 
 
      //MARK: Network calls and JSON processing functions
@@ -105,7 +70,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         self.fetchPhotos {
             (photoFetchResult) -> Void in
-            
+            print(123)
             switch photoFetchResult {
             case let .success(photos):
                 self.photos = photos
@@ -118,7 +83,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func processImageRequest(data: Data?, error: Error?) -> ImageFetchResult {
-        
         guard
             let imageData = data,
             let image = UIImage(data: imageData) else {
@@ -134,7 +98,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return .success(image)
     }
     
-    func fetchImage(for photo: Photo, completion: @escaping (ImageFetchResult) -> Void) {
+    func fetchImage(for photo: PhotoMetadata, completion: @escaping (ImageFetchResult) -> Void) {
         
         guard let photoURL = photo.remoteURL else {
             preconditionFailure("Photo expected to have a remote URL.")
@@ -221,7 +185,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     return .failure(FlickrAPIError.invalidJSONData)
             }
             
-            var processedPhotos = [Photo]()
+            var processedPhotos = [PhotoMetadata]()
             
             for jsonPhoto in photosArray {
                 if let photo = createPhotoItem(fromJSON: jsonPhoto ) {
@@ -235,11 +199,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
             return .success(processedPhotos)
         } catch let error {
+            print("google fuuuu")
             return .failure(error)
         }
     }
     
-    private func createPhotoItem(fromJSON json: [String : Any]) -> Photo? {
+    private func createPhotoItem(fromJSON json: [String : Any]) -> PhotoMetadata? {
         
         guard
             let title = json["title"] as? String,
@@ -251,7 +216,46 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 // Not enough info to construct a PhotoItem
                 return nil
         }
-        return Photo(title: title, dateTaken: dateTaken as NSDate, photoID: photoID, remoteURL: url)
+        return PhotoMetadata(title: title, dateTaken: dateTaken as NSDate, photoID: photoID, remoteURL: url)
     }
 }
 
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let identifier = "PhotoCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier,
+                                                      for: indexPath) as! PhotoCollectionViewCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        
+        let photo = photos[indexPath.row]
+        
+        // Download the image data...
+        self.fetchImage(for: photo, completion: { (result) -> Void in
+            
+            guard let photoIndex = self.photos.index(where: { $0 === photo }),
+                case let .success(image) = result else {
+                    return
+            }
+            
+            let photoIndexPath = IndexPath(item: photoIndex, section: 0)
+            
+            // Update  cell when the request finishes
+            if let cell = self.collectionView.cellForItem(at: photoIndexPath)
+                as? PhotoCollectionViewCell {
+                cell.updateCell(with: image)
+            }
+        })
+    }
+    
+}

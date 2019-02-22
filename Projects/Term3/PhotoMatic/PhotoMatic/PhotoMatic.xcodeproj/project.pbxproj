@@ -14,8 +14,8 @@
 		4476859D2215EC25009FE523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4476859B2215EC25009FE523 /* LaunchScreen.storyboard */; };
 		447685A82215EC25009FE523 /* PhotoMaticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447685A72215EC25009FE523 /* PhotoMaticTests.swift */; };
 		447685B32215EC25009FE523 /* PhotoMaticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447685B22215EC25009FE523 /* PhotoMaticUITests.swift */; };
-		447685C52215EC95009FE523 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447685C32215EC95009FE523 /* Photo.swift */; };
-		447685C62215EC95009FE523 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447685C42215EC95009FE523 /* PhotoCell.swift */; };
+		447685C52215EC95009FE523 /* PhotoMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447685C32215EC95009FE523 /* PhotoMetadata.swift */; };
+		447685C62215EC95009FE523 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447685C42215EC95009FE523 /* PhotoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +49,8 @@
 		447685AE2215EC25009FE523 /* PhotoMaticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoMaticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		447685B22215EC25009FE523 /* PhotoMaticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMaticUITests.swift; sourceTree = "<group>"; };
 		447685B42215EC25009FE523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		447685C32215EC95009FE523 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		447685C42215EC95009FE523 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		447685C32215EC95009FE523 /* PhotoMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoMetadata.swift; sourceTree = "<group>"; };
+		447685C42215EC95009FE523 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +101,11 @@
 		447685912215EC23009FE523 /* PhotoMatic */ = {
 			isa = PBXGroup;
 			children = (
-				447685C22215EC81009FE523 /* controllers */,
-				447685C12215EC78009FE523 /* model */,
-				447685C02215EC69009FE523 /* views */,
-				447685922215EC23009FE523 /* AppDelegate.swift */,
-				447685962215EC23009FE523 /* Main.storyboard */,
-				447685992215EC25009FE523 /* Assets.xcassets */,
-				4476859B2215EC25009FE523 /* LaunchScreen.storyboard */,
-				4476859E2215EC25009FE523 /* Info.plist */,
+				FE3E896C221F7DB0004B147E /* Singletons */,
+				447685C12215EC78009FE523 /* Models */,
+				447685C22215EC81009FE523 /* Controllers */,
+				FE3E896A221F7CFD004B147E /* Views */,
+				FE3E896D221F7E02004B147E /* Resource Files */,
 			);
 			path = PhotoMatic;
 			sourceTree = "<group>";
@@ -131,28 +128,56 @@
 			path = PhotoMaticUITests;
 			sourceTree = "<group>";
 		};
-		447685C02215EC69009FE523 /* views */ = {
+		447685C12215EC78009FE523 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				447685C32215EC95009FE523 /* PhotoMetadata.swift */,
 			);
-			path = views;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		447685C12215EC78009FE523 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				447685C42215EC95009FE523 /* PhotoCell.swift */,
-				447685C32215EC95009FE523 /* Photo.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		447685C22215EC81009FE523 /* controllers */ = {
+		447685C22215EC81009FE523 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				447685942215EC23009FE523 /* ViewController.swift */,
 			);
-			path = controllers;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FE3E896A221F7CFD004B147E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				447685C42215EC95009FE523 /* PhotoCollectionViewCell.swift */,
+			);
+			name = Views;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		FE3E896B221F7D8C004B147E /* System */ = {
+			isa = PBXGroup;
+			children = (
+				447685962215EC23009FE523 /* Main.storyboard */,
+				4476859B2215EC25009FE523 /* LaunchScreen.storyboard */,
+				4476859E2215EC25009FE523 /* Info.plist */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		FE3E896C221F7DB0004B147E /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				447685922215EC23009FE523 /* AppDelegate.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		FE3E896D221F7E02004B147E /* Resource Files */ = {
+			isa = PBXGroup;
+			children = (
+				447685992215EC25009FE523 /* Assets.xcassets */,
+				FE3E896B221F7D8C004B147E /* System */,
+			);
+			path = "Resource Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +311,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				447685C62215EC95009FE523 /* PhotoCell.swift in Sources */,
-				447685C52215EC95009FE523 /* Photo.swift in Sources */,
+				447685C62215EC95009FE523 /* PhotoCollectionViewCell.swift in Sources */,
+				447685C52215EC95009FE523 /* PhotoMetadata.swift in Sources */,
 				447685952215EC23009FE523 /* ViewController.swift in Sources */,
 				447685932215EC23009FE523 /* AppDelegate.swift in Sources */,
 			);
@@ -465,7 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PhotoMatic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PhotoMatic/Resource Files/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PhotoMatic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PhotoMatic/Resource Files/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

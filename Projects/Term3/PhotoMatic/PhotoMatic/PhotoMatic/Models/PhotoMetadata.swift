@@ -8,14 +8,14 @@
 
 import Foundation
 
-class Photo {
+class PhotoMetadata {
     
     let title: String?
     let dateTaken: NSDate?
     let photoID: String?
     let remoteURL: URL?
 
-    init(title: String?, dateTaken: NSDate?, photoID: String?, remoteURL: URL?)   {
+    init(title: String?, dateTaken: NSDate?, photoID: String?, remoteURL: URL?) {
         self.title = title
         self.dateTaken = dateTaken!
         self.photoID = photoID
