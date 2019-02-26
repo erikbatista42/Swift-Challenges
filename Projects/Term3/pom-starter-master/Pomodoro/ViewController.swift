@@ -187,8 +187,9 @@ class ViewController: UIViewController {
             currentInterval += 1
         } else {
             // If all intervals are complete, reset all.
-            // ACTION: Post Notification
             resetAll()
+            // ACTION: Post Notification
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "completedPomo"), object: self)
         }
     }
     
