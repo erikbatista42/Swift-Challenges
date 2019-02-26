@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var tableView:UITableView? = nil
     
+    var festivals: [Festival] = []
     
 
     override func viewDidLoad() {
@@ -84,7 +85,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let url = URL(fileURLWithPath: path)
             let contents = try? Data(contentsOf: url, options: .alwaysMapped) // Data
             let jsonResult = try? JSONSerialization.jsonObject(with: contents!, options: .allowFragments)
-            print("json res: ", jsonResult)
+            let decoder = JSONDecoder()
+            
+            if let data = contents,
+                let festivalsFromJSON = try? decoder.decode([Festival].self, from: data) {
+                festivals = festivalsFromJSON
+                for fest in festivals {
+                    print(fest.date)
+                }
+            }
         }
         
         
@@ -105,11 +114,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return festivals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ViewControllerTVCell
+        
+        let festi = festivals[indexPath.row]
+        cell.festival = festi
         
         return cell
     }

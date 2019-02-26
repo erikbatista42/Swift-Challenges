@@ -29,6 +29,15 @@ class ViewControllerTVCell: UITableViewCell {
         return label
     }()
     
+    var festival: Festival? {
+        didSet {
+            guard let festival = festival else { return }
+            festivalNameLabel.text = festival.name
+            festivalDate.text = festival.date
+            festivalNumberPeople.text = String(festival.lineup.count)
+        }
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -43,6 +52,9 @@ class ViewControllerTVCell: UITableViewCell {
         
         addSubview(festivalNumberPeople)
         festivalNumberPeople.anchor(top: festivalDate.bottomAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 0, width: 0, height: 25)
+        
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
