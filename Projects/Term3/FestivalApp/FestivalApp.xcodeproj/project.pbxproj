@@ -14,6 +14,9 @@
 		FEAB55992225E0C600CB385D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAB55982225E0C600CB385D /* Assets.xcassets */; };
 		FEAB559C2225E0C600CB385D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAB559A2225E0C600CB385D /* LaunchScreen.storyboard */; };
 		FEAB55A42225E16B00CB385D /* festivals.json in Resources */ = {isa = PBXBuildFile; fileRef = FEAB55A32225E16B00CB385D /* festivals.json */; };
+		FEAB55A62225F69600CB385D /* FestivalsEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB55A52225F69600CB385D /* FestivalsEntries.swift */; };
+		FEAB55A82225F71800CB385D /* ViewControllerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB55A72225F71800CB385D /* ViewControllerTVCell.swift */; };
+		FEAB55AA2225F9D000CB385D /* Contraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB55A92225F9D000CB385D /* Contraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		FEAB559B2225E0C600CB385D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEAB559D2225E0C600CB385D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEAB55A32225E16B00CB385D /* festivals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = festivals.json; sourceTree = "<group>"; };
+		FEAB55A52225F69600CB385D /* FestivalsEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalsEntries.swift; sourceTree = "<group>"; };
+		FEAB55A72225F71800CB385D /* ViewControllerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTVCell.swift; sourceTree = "<group>"; };
+		FEAB55A92225F9D000CB385D /* Contraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				FEAB558E2225E0C400CB385D /* AppDelegate.swift */,
-				FEAB55902225E0C400CB385D /* ViewController.swift */,
 				FEAB55A32225E16B00CB385D /* festivals.json */,
+				FEAB55A52225F69600CB385D /* FestivalsEntries.swift */,
+				FEAB55902225E0C400CB385D /* ViewController.swift */,
+				FEAB55A72225F71800CB385D /* ViewControllerTVCell.swift */,
+				FEAB55A92225F9D000CB385D /* Contraints.swift */,
 				FEAB55922225E0C400CB385D /* Main.storyboard */,
 				FEAB55982225E0C600CB385D /* Assets.xcassets */,
 				FEAB559A2225E0C600CB385D /* LaunchScreen.storyboard */,
@@ -142,6 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEAB55AA2225F9D000CB385D /* Contraints.swift in Sources */,
+				FEAB55A62225F69600CB385D /* FestivalsEntries.swift in Sources */,
+				FEAB55A82225F71800CB385D /* ViewControllerTVCell.swift in Sources */,
 				FEAB55972225E0C400CB385D /* FestivalApp.xcdatamodeld in Sources */,
 				FEAB55912225E0C400CB385D /* ViewController.swift in Sources */,
 				FEAB558F2225E0C400CB385D /* AppDelegate.swift in Sources */,
