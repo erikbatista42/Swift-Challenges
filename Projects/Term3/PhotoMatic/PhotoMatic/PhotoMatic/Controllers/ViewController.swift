@@ -60,10 +60,6 @@ class ViewController: UIViewController {
         reloadDataSource()
     }
     
-    
-   
-
-
      //MARK: Network calls and JSON processing functions
     
     private func reloadDataSource() {
@@ -230,8 +226,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let identifier = "PhotoCell"
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier,
-                                                      for: indexPath) as! PhotoCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! PhotoCollectionViewCell
         return cell
     }
     
