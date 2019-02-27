@@ -24,14 +24,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func urlSessionPostBtnClicked(_ sender: Any) {
-        
+        print("url session btn clicked")
         urlSessionApiService.postTODO()
     }
     
     @IBAction func alamofirePostBtnClicked(_ sender: Any) {
         
         // TODO: Call HTTP Post function on AlamoFireApiService instance
-        
+        print("Alomofire Post btn clicked")
 
     }
     
