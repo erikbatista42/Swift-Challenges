@@ -6,12 +6,11 @@ target 'Lesson10' do
   use_frameworks!
 
   # Pods for Lesson10
-  
+pod 'Alamofire', '~> 5.0.0-beta.2'
 
   target 'Lesson10Tests' do
     inherit! :search_paths
     # Pods for testing
-	
   end
 
   target 'Lesson10UITests' do

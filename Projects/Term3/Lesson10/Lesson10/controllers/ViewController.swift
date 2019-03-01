@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -16,7 +17,7 @@ class ViewController: UIViewController {
     var urlSessionApiService = URLSessionApiService()
     
     // TODO: Create var for AlamoFireApiService
-    
+    let alamoApiService = AlamoFireApiService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +33,11 @@ class ViewController: UIViewController {
         
         // TODO: Call HTTP Post function on AlamoFireApiService instance
         print("Alomofire Post btn clicked")
+        
+        }
 
     }
     
     
-}
+
 
