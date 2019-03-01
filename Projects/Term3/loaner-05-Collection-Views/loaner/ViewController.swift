@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
 class ViewController: UIViewController {
     
@@ -23,6 +25,7 @@ class ViewController: UIViewController {
     
     func markItemAsReturned(at index: Int) {
         //TODO: archive returned items instead of deleting them
+        
         deleteItem(at: index)
     }
     
@@ -73,6 +76,7 @@ class ViewController: UIViewController {
             guard
                 let selectedIndexPaths = collectionView.indexPathsForSelectedItems,
                 let selectedItemIndexPath = selectedIndexPaths.first else {
+                    
                     return
             }
             
@@ -87,10 +91,12 @@ class ViewController: UIViewController {
             markItemAsReturned(at: selectedItemIndexPath.row)
         case "unwind from saving new item":
             guard let itemContactVc = segue.source as? ItemContactInfoViewController else {
+                
                 return print("storyboard not set up correctly")
             }
             
-            add(saved: itemContactVc.item)
+            //add(saved: itemContactVc.item)
+            
         default:
             break
         }
@@ -107,6 +113,42 @@ class ViewController: UIViewController {
         flow.itemSize = CGSize(width: screenSize.width / 2 - horizontalPadding * 2, height: screenSize.width / 2 - verticalPadding * 2)
         flow.sectionInset = UIEdgeInsets(top: verticalPadding, left: horizontalPadding, bottom: verticalPadding, right: horizontalPadding)
         collectionView.collectionViewLayout = flow
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference().child("items")
+        ref.observe(DataEventType.value, with: { (snapshot) in
+            print("snappy: \(snapshot)")
+            self.items = []
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            for rest in postDict{
+                guard let restDict = rest.value as? [String: String ] else { continue }
+                guard let name = restDict["name"],
+                    let notes = restDict["notes"],
+                    let url = restDict["imageUrl"],
+                    let loanee = restDict["loanee"] else { return }
+                
+                let person = Loanee(name: "", contactNumber: "")
+                
+                let request = URLRequest(url: URL(string: url)!)
+                
+                let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+                    
+                    if error == nil {
+                        let loadedImage = UIImage(data: data!)
+                        let item = Item(itemTitle: name, notes: notes, itemImage: loadedImage!, loanee: person)
+                        self.items.append(item)
+                        print("item appended")
+                        DispatchQueue.main.async {
+                            self.collectionView.reloadData()
+                        }
+                        
+                    }
+                }
+                task.resume()
+            
+            }
+            self.collectionView.reloadData()
+        })
     }
 }
 

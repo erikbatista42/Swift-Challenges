@@ -16,10 +16,10 @@ class ItemDetailedViewController: UIViewController {
     func updateUI() {
         labelTitle.text = "Item Details"
         labelItemTitle.text = item.itemTitle
-        imageViewItem.image = item.itemImage
+//        imageViewItem.image = item.itemImage
         if let loanee = item.loanee {
             labelLoaneeName.text = loanee.name
-            imageViewLoanee.image = loanee.profileImage
+//            imageViewLoanee.image = loanee.profileImage
         }
         
         if item.notes.isEmpty {
