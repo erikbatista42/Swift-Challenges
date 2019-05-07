@@ -245,7 +245,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             
             let photoIndexPath = IndexPath(item: photoIndex, section: 0)
             
-            // Update  cell when the request finishes
+            // Update cell when the request finishes
             if let cell = self.collectionView.cellForItem(at: photoIndexPath)
                 as? PhotoCollectionViewCell {
                 cell.updateCell(with: image)
