@@ -22,6 +22,7 @@
 		FE116C862284C9870084A3EC /* LoanedItems.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE116C842284C9870084A3EC /* LoanedItems.xcdatamodeld */; };
 		FE116C892284CDD70084A3EC /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE116C872284CDD70084A3EC /* Item+CoreDataClass.swift */; };
 		FE116C8A2284CDD70084A3EC /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE116C882284CDD70084A3EC /* Item+CoreDataProperties.swift */; };
+		FE116C8C2284D1700084A3EC /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE116C8B2284D1700084A3EC /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		FE116C852284C9870084A3EC /* LoanedItems.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoanedItems.xcdatamodel; sourceTree = "<group>"; };
 		FE116C872284CDD70084A3EC /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FE116C882284CDD70084A3EC /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FE116C8B2284D1700084A3EC /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				FE116C872284CDD70084A3EC /* Item+CoreDataClass.swift */,
+				FE116C8B2284D1700084A3EC /* ItemStore.swift */,
 				FE116C882284CDD70084A3EC /* Item+CoreDataProperties.swift */,
 				448856872239D544001EDDC4 /* Loanee.swift */,
 				FE116C842284C9870084A3EC /* LoanedItems.xcdatamodeld */,
@@ -199,6 +202,7 @@
 				FE116C8A2284CDD70084A3EC /* Item+CoreDataProperties.swift in Sources */,
 				E9D24DEF212789B90045C5D8 /* UIImage+ImagePickerController.swift in Sources */,
 				FE116C862284C9870084A3EC /* LoanedItems.xcdatamodeld in Sources */,
+				FE116C8C2284D1700084A3EC /* ItemStore.swift in Sources */,
 				E929E9692124EB7E0018488C /* AppDelegate.swift in Sources */,
 				E969554E21277C3100457E12 /* ItemEditorViewController.swift in Sources */,
 				448856882239D544001EDDC4 /* Loanee.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import ContactsUI
+import CoreData
 
 class ItemContactInfoViewController: UIViewController, UITextFieldDelegate {
 
