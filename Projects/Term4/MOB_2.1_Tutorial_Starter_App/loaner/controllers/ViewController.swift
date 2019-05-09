@@ -16,6 +16,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        // Save the new items in the Managed Object Context
+        store.saveContext()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
