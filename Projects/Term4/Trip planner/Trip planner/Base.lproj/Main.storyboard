@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,60 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trip_planner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-ce-ct3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellId" id="Baa-Ri-eq8">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Baa-Ri-eq8" id="0IK-db-uwi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsF-GO-ZAE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Planned Trips" id="Gf5-qH-1ec">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vpr-sn-ncJ">
+                                            <connections>
+                                                <action selector="addButton:" destination="BYZ-38-t0r" id="8r2-cA-BZU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pfH-ce-ct3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0dM-3Y-p6M"/>
+                            <constraint firstItem="pfH-ce-ct3" firstAttribute="top" secondItem="xsF-GO-ZAE" secondAttribute="bottom" id="7ui-yy-qBz"/>
+                            <constraint firstItem="xsF-GO-ZAE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CBb-GY-8j3"/>
+                            <constraint firstItem="pfH-ce-ct3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ljb-lM-edl"/>
+                            <constraint firstItem="pfH-ce-ct3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Osk-vR-qbg"/>
+                            <constraint firstItem="xsF-GO-ZAE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vce-MT-uGE"/>
+                            <constraint firstItem="xsF-GO-ZAE" firstAttribute="leading" secondItem="pfH-ce-ct3" secondAttribute="leading" id="aon-6C-AFh"/>
+                            <constraint firstItem="xsF-GO-ZAE" firstAttribute="trailing" secondItem="pfH-ce-ct3" secondAttribute="trailing" id="r6k-6Z-ui4"/>
+                            <constraint firstItem="xsF-GO-ZAE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ry8-Yb-RLI"/>
+                            <constraint firstItem="xsF-GO-ZAE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uXJ-20-MbS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tripsTableView" destination="pfH-ce-ct3" id="GsA-DA-hQL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="114.50892857142857"/>
         </scene>
     </scenes>
 </document>
