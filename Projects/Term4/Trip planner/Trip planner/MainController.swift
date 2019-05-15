@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet weak var tripsTableView: UITableView!
+    var managedContext = NSManagedObjectContext()
     
     @IBAction func addButton(_ sender: Any) {
-        print("add")
+        // add trip
+        
     }
     
     override func viewDidLoad() {
@@ -22,6 +25,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         tripsTableView.delegate = self
         tripsTableView.dataSource = self
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(Waypoints(), animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
