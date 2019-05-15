@@ -35,16 +35,42 @@ class Waypoints: UIViewController {
         self.navigationController?.present(addWaypoint, animated: true, completion: nil)
     }
 
+    let topViewLabel: UILabel = {
+        let label = UILabel()
+        label.text = "San Francisco"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 3
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let addMoreWaypointsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Add more waypoints", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(handleGetStartedButton), for: .touchUpInside)
+        return button
+    }()
+    
+    
+    let topView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .blue
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }()
     
     override func viewDidAppear(_ animated: Bool) {
 
         
-        waypoints.popLast() // make array empty
+//        waypoints.popLast() // make array empty
         
         if waypoints.isEmpty { // trip doesn't have any waypoints
             emptyWaypoints()
         } else {
             // setup views
+            waypointsView()
         }
     }
     
@@ -55,6 +81,19 @@ class Waypoints: UIViewController {
         self.title = "Your Trip:\(waypoint)"
     }
     
+    func waypointsView() {
+        view.addSubview(topView)
+        topView.topAnchor.constraint(equalTo: view.topAnchor, constant: 65).isActive = true
+        topView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        topView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+        topView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        
+        topView.addSubview(topViewLabel)
+        topViewLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        topViewLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        topViewLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 20).isActive = true
+        topViewLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    }
     func emptyWaypoints() {
         print("waypoints are empty")
         

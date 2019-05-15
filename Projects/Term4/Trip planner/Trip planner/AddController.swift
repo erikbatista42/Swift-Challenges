@@ -29,7 +29,7 @@ class AddController: UIViewController {
         }
         else {
             // pass whatever you typed into the main view controller
-            self.saveItem(itemToSave: textField.text!)
+//            self.saveItem(itemToSave: textField.text!)
             // then dismiss
             dismiss(animated: true, completion: nil)
         }
