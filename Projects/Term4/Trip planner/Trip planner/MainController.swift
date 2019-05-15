@@ -14,6 +14,7 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tripsTableView: UITableView!
     var managedContext = NSManagedObjectContext()
+    var tempTrips = ["San Jose","San Francisco","San Paulo","San Pink"]
     
     @IBAction func addButton(_ sender: Any) {
         // add trip
@@ -27,12 +28,19 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tripsTableView.dataSource = self
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.tempTrips.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(Waypoints(), animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return tempTrips.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
