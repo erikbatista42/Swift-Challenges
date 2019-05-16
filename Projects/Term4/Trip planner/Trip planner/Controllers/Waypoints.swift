@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class Waypoints: UIViewController {
+class EmptyWaypointsController: UIViewController {
     
     var waypoints = ["something"]
+    var tableView = UITableView()
     
     let haventAddedWaypointsLabel: UILabel = {
         let label = UILabel()
@@ -55,23 +56,16 @@ class Waypoints: UIViewController {
     
     let topView: UIView = {
         let view = UIView()
-        view.backgroundColor = .blue
         view.translatesAutoresizingMaskIntoConstraints = false
-        
         return view
     }()
     
     override func viewDidAppear(_ animated: Bool) {
 
         
-//        waypoints.popLast() // make array empty
-        
-        if waypoints.isEmpty { // trip doesn't have any waypoints
-            emptyWaypoints()
-        } else {
-            // setup views
-            waypointsView()
-        }
+        waypoints.popLast() // make array empty
+        emptyWaypointsView()
+    
     }
     
     override func viewDidLoad() {
@@ -81,22 +75,33 @@ class Waypoints: UIViewController {
         self.title = "Your Trip:\(waypoint)"
     }
     
-    func waypointsView() {
-        view.addSubview(topView)
-        topView.topAnchor.constraint(equalTo: view.topAnchor, constant: 65).isActive = true
-        topView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        topView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        topView.heightAnchor.constraint(equalToConstant: 150).isActive = true
-        
-        topView.addSubview(topViewLabel)
-        topViewLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
-        topViewLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        topViewLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 20).isActive = true
-        topViewLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-    }
-    func emptyWaypoints() {
-        print("waypoints are empty")
-        
+//    func waypointsView() {
+//        view.addSubview(topView)
+//        topView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
+//        topView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+//        topView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+//        topView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+//
+//        topView.addSubview(topViewLabel)
+//        topViewLabel.topAnchor.constraint(equalTo: topView.topAnchor, constant: 20).isActive = true
+//        topViewLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+//        topViewLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+//        topViewLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+//
+//        topView.addSubview(addMoreWaypointsButton)
+//        addMoreWaypointsButton.bottomAnchor.constraint(equalTo: topView.bottomAnchor, constant: -8).isActive = true
+//        addMoreWaypointsButton.leftAnchor.constraint(equalTo: topView.leftAnchor, constant: 8).isActive = true
+//        addMoreWaypointsButton.rightAnchor.constraint(equalTo: topView.rightAnchor, constant: -8).isActive = true
+//
+//        tableView.backgroundColor = .green
+//        view.addSubview(tableView)
+////        tableView.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 100).isActive = true
+////        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+////        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+////        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+//
+//    }
+    func emptyWaypointsView() {
         view.addSubview(getStartedButton)
         getStartedButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         getStartedButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -106,6 +111,6 @@ class Waypoints: UIViewController {
         haventAddedWaypointsLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         haventAddedWaypointsLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
-    
+//
     
 }

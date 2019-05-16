@@ -131,14 +131,32 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gDY-aK-eXz">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="waypointsListCell" id="6Fh-vG-TfD">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Fh-vG-TfD" id="TjA-hz-NRi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="gDY-aK-eXz" firstAttribute="leading" secondItem="S7A-q0-kPF" secondAttribute="leading" id="PWl-dF-nrl"/>
                             <constraint firstItem="N3S-bG-gre" firstAttribute="leading" secondItem="S7A-q0-kPF" secondAttribute="leading" id="b84-6O-sLO"/>
+                            <constraint firstItem="gDY-aK-eXz" firstAttribute="trailing" secondItem="S7A-q0-kPF" secondAttribute="trailing" id="bFn-zH-nnV"/>
+                            <constraint firstItem="gDY-aK-eXz" firstAttribute="bottom" secondItem="S7A-q0-kPF" secondAttribute="bottom" id="bpt-UW-HvD"/>
                             <constraint firstItem="N3S-bG-gre" firstAttribute="bottom" secondItem="S7A-q0-kPF" secondAttribute="bottom" id="c3V-fa-u0b"/>
                             <constraint firstItem="N3S-bG-gre" firstAttribute="top" secondItem="IH1-dC-X54" secondAttribute="bottom" id="eRu-3G-TWG"/>
                             <constraint firstItem="IH1-dC-X54" firstAttribute="trailing" secondItem="S7A-q0-kPF" secondAttribute="trailing" id="ini-cd-2hy"/>
                             <constraint firstItem="N3S-bG-gre" firstAttribute="trailing" secondItem="S7A-q0-kPF" secondAttribute="trailing" id="jHM-ma-7AS"/>
+                            <constraint firstItem="gDY-aK-eXz" firstAttribute="top" secondItem="IH1-dC-X54" secondAttribute="bottom" id="vM3-Yf-PgN"/>
                             <constraint firstItem="IH1-dC-X54" firstAttribute="top" secondItem="S7A-q0-kPF" secondAttribute="top" id="wFl-kT-NeU"/>
                             <constraint firstItem="IH1-dC-X54" firstAttribute="leading" secondItem="S7A-q0-kPF" secondAttribute="leading" id="xhD-OI-V0J"/>
                         </constraints>
@@ -156,10 +174,84 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="IH1-dC-X54" id="5Cb-Of-nRL"/>
+                        <outlet property="waypointsListTableView" destination="gDY-aK-eXz" id="4Kb-0c-XNV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTM-ud-Nll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3302.898550724638" y="114.50892857142857"/>
+        </scene>
+        <!--View Waypoints Controller-->
+        <scene sceneID="TmP-x9-G0r">
+            <objects>
+                <viewController storyboardIdentifier="viewWaypoints" id="QkJ-JD-XCC" customClass="ViewWaypointsController" customModule="Trip_planner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4WE-zN-Dsf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCS-Kj-Bx8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="260"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llI-oe-pXS">
+                                        <rect key="frame" x="20" y="210" width="374" height="30"/>
+                                        <state key="normal" title="Add more waypoints!"/>
+                                        <connections>
+                                            <action selector="addMoreWaypointsButton:" destination="QkJ-JD-XCC" eventType="touchUpInside" id="Wlv-bE-wXU"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycu-cN-emV">
+                                        <rect key="frame" x="140" y="117" width="134" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="llI-oe-pXS" firstAttribute="leading" secondItem="jCS-Kj-Bx8" secondAttribute="leading" constant="20" id="2l0-AK-Fmv"/>
+                                    <constraint firstAttribute="bottom" secondItem="llI-oe-pXS" secondAttribute="bottom" constant="20" id="H0k-Pe-9h7"/>
+                                    <constraint firstAttribute="trailing" secondItem="llI-oe-pXS" secondAttribute="trailing" constant="20" id="eWG-FI-pam"/>
+                                    <constraint firstItem="Ycu-cN-emV" firstAttribute="centerX" secondItem="jCS-Kj-Bx8" secondAttribute="centerX" id="fxS-JI-zrg"/>
+                                    <constraint firstItem="Ycu-cN-emV" firstAttribute="centerY" secondItem="jCS-Kj-Bx8" secondAttribute="centerY" id="gFZ-j4-zcV"/>
+                                    <constraint firstAttribute="height" constant="260" id="qrT-Bc-ijf"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BKa-m4-iiu">
+                                <rect key="frame" x="0.0" y="304" width="414" height="558"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="viewWaypointsTableViewCell" id="QlD-l0-dto">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QlD-l0-dto" id="awv-Te-nJa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jCS-Kj-Bx8" firstAttribute="top" secondItem="2o5-Ou-fts" secondAttribute="top" id="JNi-Bu-wwt"/>
+                            <constraint firstItem="jCS-Kj-Bx8" firstAttribute="leading" secondItem="2o5-Ou-fts" secondAttribute="leading" id="PdK-JH-ISP"/>
+                            <constraint firstItem="BKa-m4-iiu" firstAttribute="bottom" secondItem="2o5-Ou-fts" secondAttribute="bottom" id="QHR-cg-oLM"/>
+                            <constraint firstItem="BKa-m4-iiu" firstAttribute="trailing" secondItem="2o5-Ou-fts" secondAttribute="trailing" id="VJY-Yl-HpG"/>
+                            <constraint firstItem="BKa-m4-iiu" firstAttribute="top" secondItem="jCS-Kj-Bx8" secondAttribute="bottom" id="iDP-bP-ytq"/>
+                            <constraint firstItem="BKa-m4-iiu" firstAttribute="leading" secondItem="2o5-Ou-fts" secondAttribute="leading" id="o23-px-1G2"/>
+                            <constraint firstItem="jCS-Kj-Bx8" firstAttribute="trailing" secondItem="2o5-Ou-fts" secondAttribute="trailing" id="ot9-7Z-jfK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2o5-Ou-fts"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewWaypointsTableView" destination="BKa-m4-iiu" id="7QZ-ei-eFU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fBH-HD-0hD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4115.9420289855079" y="114.50892857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DiC-FT-YaJ">

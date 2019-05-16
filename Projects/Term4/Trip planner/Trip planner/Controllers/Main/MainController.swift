@@ -13,8 +13,9 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     @IBOutlet weak var tripsTableView: UITableView!
-    var managedContext = NSManagedObjectContext()
+    
     var tempTrips = ["San Jose","San Francisco","San Paulo","San Pink"]
+    var itemsInWaypoints = ["blue"]
     
     @IBAction func addButton(_ sender: Any) {
         // add trip
@@ -36,7 +37,14 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(Waypoints(), animated: true)
+        
+        itemsInWaypoints.popLast()
+        if itemsInWaypoints.isEmpty {
+            let viewWaypoints = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewWaypoints") as UIViewController
+            self.navigationController?.pushViewController(viewWaypoints, animated: true)
+        } else {
+            self.navigationController?.pushViewController(EmptyWaypointsController(), animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +53,7 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tripsTableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-        let tripName = "San Jose"
+        let tripName = tempTrips[indexPath.row]
         cell.textLabel?.text = "Trip to \(tripName)"
         return cell
     }

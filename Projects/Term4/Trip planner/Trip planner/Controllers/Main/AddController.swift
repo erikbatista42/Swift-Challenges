@@ -29,7 +29,16 @@ class AddController: UIViewController {
         }
         else {
             // pass whatever you typed into the main view controller
-//            self.saveItem(itemToSave: textField.text!)
+            let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
+            
+            // create entity
+            let entity = NSEntityDescription.entity(forEntityName: "Trip", in: managedContext)
+            
+            // create item
+            let item = NSManagedObject(entity: entity!, insertInto: managedContext)
+            item.setValue(textField.text!, forKey: "tripName")
+            
+            CoreDataManager.sharedManager.saveContext()
             // then dismiss
             dismiss(animated: true, completion: nil)
         }
