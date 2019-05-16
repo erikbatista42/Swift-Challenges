@@ -26,6 +26,7 @@
 		FECE65F5228DEFDD00451E8A /* Waypoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65F1228DEFDD00451E8A /* Waypoint+CoreDataProperties.swift */; };
 		FECE65F6228DEFDD00451E8A /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65F2228DEFDD00451E8A /* Trip+CoreDataClass.swift */; };
 		FECE65F7228DEFDD00451E8A /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65F3228DEFDD00451E8A /* Trip+CoreDataProperties.swift */; };
+		FECE65FD228DF7E100451E8A /* PlannedTrips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE7F31CC2288E0A900CC50F9 /* PlannedTrips.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -367,6 +368,7 @@
 				FE5E9CCE2284EF4F00FE15DF /* AddController.swift in Sources */,
 				FECE65E1228D2DE800451E8A /* CoreDataStack.swift in Sources */,
 				FECE65EF228DE6E100451E8A /* FetchTripsController.swift in Sources */,
+				FECE65FD228DF7E100451E8A /* PlannedTrips.xcdatamodeld in Sources */,
 				FECE65DA228CEE3900451E8A /* WaypointsController.swift in Sources */,
 				FECE65F7228DEFDD00451E8A /* Trip+CoreDataProperties.swift in Sources */,
 				FE71F9502277B2580049C620 /* MainController.swift in Sources */,

@@ -5,12 +5,12 @@
         <attribute name="tripName" attributeType="String" syncable="YES"/>
         <relationship name="waypoint" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="trip" inverseEntity="Waypoint" syncable="YES"/>
     </entity>
-    <entity name="Waypoint" representedClassName="Waypoint" syncable="YES" codeGenerationType="class">
+    <entity name="Waypoint" representedClassName=".Waypoint" syncable="YES">
         <attribute name="waypoint" attributeType="String" syncable="YES"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="waypoint" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <elements>
         <element name="Trip" positionX="174.54296875" positionY="-46.18359375" width="128" height="88"/>
-        <element name="Waypoint" positionX="-63" positionY="-44.91015625" width="128" height="73"/>
+        <element name="Waypoint" positionX="-63" positionY="-44.91015625" width="128" height="75"/>
     </elements>
 </model>
