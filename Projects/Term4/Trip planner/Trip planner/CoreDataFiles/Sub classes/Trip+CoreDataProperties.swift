@@ -14,14 +14,13 @@ import CoreData
 extension Trip {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Trip> {
-        
         let request = NSFetchRequest<Trip>(entityName: "Trip")
         request.sortDescriptors = [NSSortDescriptor(key: "tripName", ascending: true)]
         return request
     }
 
-    @NSManaged public var tripName: String
     @NSManaged public var hasWayPoint: Bool
+    @NSManaged public var tripName: String
     @NSManaged public var waypoint: NSSet?
 
 }

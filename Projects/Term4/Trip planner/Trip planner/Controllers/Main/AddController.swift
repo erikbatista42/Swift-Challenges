@@ -13,32 +13,27 @@ import CoreData
 class AddController: UIViewController {
     
     var managedObjectContext: NSManagedObjectContext!
+    var trip: Trip?
     
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func Done(_ sender: Any) {
         if textField.text?.isEmpty == false {
+            let trips = NSEntityDescription.insertNewObject(forEntityName: "Trip", into: managedObjectContext) as! Trip
+            trips.tripName = textField.text!
+            trips.hasWayPoint = false
             
-            // entity
+            print("""
+
+                    trip: \(trips.tripName) \(trips.hasWayPoint)
+
+                """)
             
-            guard let entity = NSEntityDescription.entity(forEntityName: "Trip", in: managedObjectContext) else { return }
+            managedObjectContext.saveChanges()
             
-            //            guard let trip = NSEntityDescription.insertNewObject(forEntityName: "Trip", into: managedObjectContext) as? Trip else { return }
-            
-            //            trip.tripName = textField.text
-            
-            // managed object
-            let trip = NSManagedObject(entity: entity, insertInto: managedObjectContext)
-            
-            // save it
-            trip.setValue(textField.text, forKey: "trip")
-            
-            print("okay")
-            managedObjectContext?.saveChanges()
-            
-            print("Alright")
-            dismiss(animated: true, completion: nil)
+//            dismiss(animated: true, completion: nil)
+            self.navigationController?.popToRootViewController(animated: true)
         }
         else {
             let alertController = UIAlertController(title: "Whoops!", message: "Text field is empty. Make sure to type something!", preferredStyle: .alert)

@@ -16,16 +16,16 @@
 		FE71F9632277B25B0049C620 /* Trip_plannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71F9622277B25B0049C620 /* Trip_plannerTests.swift */; };
 		FE71F96E2277B25B0049C620 /* Trip_plannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71F96D2277B25B0049C620 /* Trip_plannerUITests.swift */; };
 		FE7F31CE2288E0A900CC50F9 /* PlannedTrips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE7F31CC2288E0A900CC50F9 /* PlannedTrips.xcdatamodeld */; };
+		FE855233228E0FF600725C71 /* Waypoint+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85522F228E0FF600725C71 /* Waypoint+CoreDataClass.swift */; };
+		FE855234228E0FF600725C71 /* Waypoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE855230228E0FF600725C71 /* Waypoint+CoreDataProperties.swift */; };
+		FE855235228E0FF600725C71 /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE855231228E0FF600725C71 /* Trip+CoreDataClass.swift */; };
+		FE855236228E0FF600725C71 /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE855232228E0FF600725C71 /* Trip+CoreDataProperties.swift */; };
 		FEBF94B9228C9963008272B9 /* AddWaypointController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBF94B8228C9962008272B9 /* AddWaypointController.swift */; };
 		FEBF94BC228C9AB7008272B9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF94BB228C9AB7008272B9 /* MapKit.framework */; };
 		FECE65DA228CEE3900451E8A /* WaypointsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65D9228CEE3800451E8A /* WaypointsController.swift */; };
 		FECE65E1228D2DE800451E8A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65E0228D2DE800451E8A /* CoreDataStack.swift */; };
 		FECE65E3228D2E3B00451E8A /* EmptyWaypointsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65E2228D2E3B00451E8A /* EmptyWaypointsController.swift */; };
 		FECE65EF228DE6E100451E8A /* FetchTripsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65EE228DE6E100451E8A /* FetchTripsController.swift */; };
-		FECE65F4228DEFDD00451E8A /* Waypoint+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65F0228DEFDD00451E8A /* Waypoint+CoreDataClass.swift */; };
-		FECE65F5228DEFDD00451E8A /* Waypoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65F1228DEFDD00451E8A /* Waypoint+CoreDataProperties.swift */; };
-		FECE65F6228DEFDD00451E8A /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65F2228DEFDD00451E8A /* Trip+CoreDataClass.swift */; };
-		FECE65F7228DEFDD00451E8A /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65F3228DEFDD00451E8A /* Trip+CoreDataProperties.swift */; };
 		FECE65FD228DF7E100451E8A /* PlannedTrips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE7F31CC2288E0A900CC50F9 /* PlannedTrips.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -62,16 +62,16 @@
 		FE71F96D2277B25B0049C620 /* Trip_plannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip_plannerUITests.swift; sourceTree = "<group>"; };
 		FE71F96F2277B25B0049C620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE7F31CD2288E0A900CC50F9 /* PlannedTrips.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlannedTrips.xcdatamodel; sourceTree = "<group>"; };
+		FE85522F228E0FF600725C71 /* Waypoint+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Waypoint+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FE855230228E0FF600725C71 /* Waypoint+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Waypoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FE855231228E0FF600725C71 /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FE855232228E0FF600725C71 /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FEBF94B8228C9962008272B9 /* AddWaypointController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWaypointController.swift; sourceTree = "<group>"; };
 		FEBF94BB228C9AB7008272B9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FECE65D9228CEE3800451E8A /* WaypointsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointsController.swift; sourceTree = "<group>"; };
 		FECE65E0228D2DE800451E8A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FECE65E2228D2E3B00451E8A /* EmptyWaypointsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyWaypointsController.swift; sourceTree = "<group>"; };
 		FECE65EE228DE6E100451E8A /* FetchTripsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTripsController.swift; sourceTree = "<group>"; };
-		FECE65F0228DEFDD00451E8A /* Waypoint+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Waypoint+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FECE65F1228DEFDD00451E8A /* Waypoint+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Waypoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		FECE65F2228DEFDD00451E8A /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FECE65F3228DEFDD00451E8A /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,10 +219,10 @@
 		FECE65ED228D33F800451E8A /* Sub classes */ = {
 			isa = PBXGroup;
 			children = (
-				FECE65F0228DEFDD00451E8A /* Waypoint+CoreDataClass.swift */,
-				FECE65F1228DEFDD00451E8A /* Waypoint+CoreDataProperties.swift */,
-				FECE65F2228DEFDD00451E8A /* Trip+CoreDataClass.swift */,
-				FECE65F3228DEFDD00451E8A /* Trip+CoreDataProperties.swift */,
+				FE85522F228E0FF600725C71 /* Waypoint+CoreDataClass.swift */,
+				FE855230228E0FF600725C71 /* Waypoint+CoreDataProperties.swift */,
+				FE855231228E0FF600725C71 /* Trip+CoreDataClass.swift */,
+				FE855232228E0FF600725C71 /* Trip+CoreDataProperties.swift */,
 			);
 			path = "Sub classes";
 			sourceTree = "<group>";
@@ -363,19 +363,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FECE65F6228DEFDD00451E8A /* Trip+CoreDataClass.swift in Sources */,
 				FECE65E3228D2E3B00451E8A /* EmptyWaypointsController.swift in Sources */,
 				FE5E9CCE2284EF4F00FE15DF /* AddController.swift in Sources */,
 				FECE65E1228D2DE800451E8A /* CoreDataStack.swift in Sources */,
 				FECE65EF228DE6E100451E8A /* FetchTripsController.swift in Sources */,
+				FE855233228E0FF600725C71 /* Waypoint+CoreDataClass.swift in Sources */,
 				FECE65FD228DF7E100451E8A /* PlannedTrips.xcdatamodeld in Sources */,
 				FECE65DA228CEE3900451E8A /* WaypointsController.swift in Sources */,
-				FECE65F7228DEFDD00451E8A /* Trip+CoreDataProperties.swift in Sources */,
+				FE855234228E0FF600725C71 /* Waypoint+CoreDataProperties.swift in Sources */,
+				FE855236228E0FF600725C71 /* Trip+CoreDataProperties.swift in Sources */,
 				FE71F9502277B2580049C620 /* MainController.swift in Sources */,
 				FE71F94E2277B2580049C620 /* AppDelegate.swift in Sources */,
+				FE855235228E0FF600725C71 /* Trip+CoreDataClass.swift in Sources */,
 				FEBF94B9228C9963008272B9 /* AddWaypointController.swift in Sources */,
-				FECE65F5228DEFDD00451E8A /* Waypoint+CoreDataProperties.swift in Sources */,
-				FECE65F4228DEFDD00451E8A /* Waypoint+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

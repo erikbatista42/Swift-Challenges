@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Trip" representedClassName=".Trip" syncable="YES">
-        <attribute name="hasWayPoint" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasWayPoint" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="tripName" attributeType="String" syncable="YES"/>
         <relationship name="waypoint" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="trip" inverseEntity="Waypoint" syncable="YES"/>
     </entity>
@@ -10,7 +10,7 @@
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="waypoint" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Trip" positionX="174.54296875" positionY="-46.18359375" width="128" height="88"/>
+        <element name="Trip" positionX="174.54296875" positionY="-46.18359375" width="128" height="90"/>
         <element name="Waypoint" positionX="-63" positionY="-44.91015625" width="128" height="75"/>
     </elements>
 </model>

@@ -21,10 +21,14 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 
     @IBAction func addButton(_ sender: UIBarButtonItem) {
-        let addTripVC = AddController()
-        let addTrip = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addTrip") as UIViewController
-        addTripVC.managedObjectContext = self.managedObjectContext
-        self.navigationController?.present(addTrip, animated: true)
+        let addController = AddController()
+        addController.performSegue(withIdentifier: "addControllerId", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let addController = segue.destination as! AddController
+            addController.managedObjectContext = self.managedObjectContext
+        
     }
     
     override func viewDidLoad() {

@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Waypoint)
+
 public class Waypoint: NSManagedObject {
 
 }
