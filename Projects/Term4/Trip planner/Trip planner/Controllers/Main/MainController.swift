@@ -49,7 +49,9 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.tempTrips.remove(at: indexPath.row)
+            let trip = fetchedResultsController.object(at: indexPath)
+            managedObjectContext.delete(trip)
+            managedObjectContext.saveChanges()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
