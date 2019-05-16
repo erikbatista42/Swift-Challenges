@@ -11,15 +11,20 @@ import CoreData
 
 class MainController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let managedObjectContext = CoreDataStack().managedObjectContext
+    var trip: Trip!
     
     @IBOutlet weak var tripsTableView: UITableView!
     
     var tempTrips = ["San Jose","San Francisco","San Paulo","San Pink"]
     var itemsInWaypoints = ["blue"]
     
-    @IBAction func addButton(_ sender: Any) {
-        // add trip
-        
+
+    @IBAction func addButton(_ sender: UIBarButtonItem) {
+        let addTripVC = AddController()
+        let addTrip = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addTrip") as UIViewController
+        addTripVC.managedObjectContext = self.managedObjectContext
+        self.navigationController?.present(addTrip, animated: true)
     }
     
     override func viewDidLoad() {
@@ -27,7 +32,16 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         tripsTableView.delegate = self
         tripsTableView.dataSource = self
+        guard let trip = self.trip else { return }
+        self.navigationItem.title = "Trip to:\(trip.tripName)"
+        
+        
     }
+    
+    lazy var fetchedResultsController: FetchTripsController = {
+        return FetchTripsController(managedObjectContext: self.managedObjectContext, tableView: self.tripsTableView)
+    }()
+    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -38,23 +52,38 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        itemsInWaypoints.popLast()
-        if itemsInWaypoints.isEmpty {
+        let waypointsController = WaypointsController()
+        let emptyWaypointsController = EmptyWaypointsController()
+        let trip = fetchedResultsController.object(at: indexPath)
+        
+        if trip.hasWayPoint == true {
+            waypointsController.trip = trip
+            waypointsController.managedObjectContext = self.managedObjectContext
             let viewWaypoints = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewWaypoints") as UIViewController
             self.navigationController?.pushViewController(viewWaypoints, animated: true)
         } else {
-            self.navigationController?.pushViewController(EmptyWaypointsController(), animated: true)
+            emptyWaypointsController.trip = trip
+            emptyWaypointsController.managedObjectContext = self.managedObjectContext
+            let emptyController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewWaypoints") as UIViewController
+            
+            self.navigationController?.pushViewController(emptyController, animated: true)
         }
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResultsController.sections?.count ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tempTrips.count
+        guard let section = fetchedResultsController.sections?[section] else {return 0}
+        return section.numberOfObjects
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tripsTableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-        let tripName = tempTrips[indexPath.row]
-        cell.textLabel?.text = "Trip to \(tripName)"
+        
+        let trip = fetchedResultsController.object(at: indexPath)
+        cell.textLabel?.text = "Trip to \(trip.tripName)"
         return cell
     }
 

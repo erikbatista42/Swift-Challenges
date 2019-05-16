@@ -45,10 +45,7 @@
                     <navigationItem key="navigationItem" title="Planned Trips" id="XXy-js-W2P">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cgO-kN-FFy">
                             <connections>
-                                <action selector="addButton:" destination="BYZ-38-t0r" id="e4f-8A-hht"/>
-                                <segue destination="Tbp-Oe-Pru" kind="popoverPresentation" popoverAnchorBarButtonItem="cgO-kN-FFy" id="SrC-so-WiW">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <action selector="addButton:" destination="BYZ-38-t0r" id="Ytw-47-7G3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -183,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="3302.898550724638" y="114.50892857142857"/>
         </scene>
-        <!--View Waypoints Controller-->
+        <!--Waypoints Controller-->
         <scene sceneID="TmP-x9-G0r">
             <objects>
-                <viewController storyboardIdentifier="viewWaypoints" id="QkJ-JD-XCC" customClass="ViewWaypointsController" customModule="Trip_planner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewWaypoints" id="QkJ-JD-XCC" customClass="WaypointsController" customModule="Trip_planner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4WE-zN-Dsf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,7 +271,7 @@
         <!--Navigation Controller-->
         <scene sceneID="RgO-jh-1M0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tbp-Oe-Pru" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="addTrip" automaticallyAdjustsScrollViewInsets="NO" id="Tbp-Oe-Pru" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VLb-Js-2Go">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
