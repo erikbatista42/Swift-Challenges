@@ -17,6 +17,7 @@ class WaypointsController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var managedObjectContext: NSManagedObjectContext!
     
+    @IBOutlet weak var tripNameLabel: UILabel!
     @IBOutlet weak var viewWaypointsTableView: UITableView!
     
     @IBAction func addMoreWaypointsButton(_ sender: Any) {
@@ -26,6 +27,7 @@ class WaypointsController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tripNameLabel.text = trip.tripName
         viewWaypointsTableView.delegate = self
         viewWaypointsTableView.dataSource = self
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))

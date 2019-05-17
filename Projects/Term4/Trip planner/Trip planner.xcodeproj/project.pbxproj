@@ -20,6 +20,7 @@
 		FE855234228E0FF600725C71 /* Waypoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE855230228E0FF600725C71 /* Waypoint+CoreDataProperties.swift */; };
 		FE855235228E0FF600725C71 /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE855231228E0FF600725C71 /* Trip+CoreDataClass.swift */; };
 		FE855236228E0FF600725C71 /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE855232228E0FF600725C71 /* Trip+CoreDataProperties.swift */; };
+		FE855238228E48DD00725C71 /* AddWaypointControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE855237228E48DD00725C71 /* AddWaypointControllerDetail.swift */; };
 		FEBF94B9228C9963008272B9 /* AddWaypointController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBF94B8228C9962008272B9 /* AddWaypointController.swift */; };
 		FEBF94BC228C9AB7008272B9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF94BB228C9AB7008272B9 /* MapKit.framework */; };
 		FECE65DA228CEE3900451E8A /* WaypointsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE65D9228CEE3800451E8A /* WaypointsController.swift */; };
@@ -66,6 +67,7 @@
 		FE855230228E0FF600725C71 /* Waypoint+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Waypoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FE855231228E0FF600725C71 /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FE855232228E0FF600725C71 /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FE855237228E48DD00725C71 /* AddWaypointControllerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWaypointControllerDetail.swift; sourceTree = "<group>"; };
 		FEBF94B8228C9962008272B9 /* AddWaypointController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWaypointController.swift; sourceTree = "<group>"; };
 		FEBF94BB228C9AB7008272B9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FECE65D9228CEE3800451E8A /* WaypointsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointsController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				FECE65DF228D125700451E8A /* Main */,
 				FECE65E4228D312000451E8A /* Add waypoint */,
 				FECE65D9228CEE3800451E8A /* WaypointsController.swift */,
+				FE855237228E48DD00725C71 /* AddWaypointControllerDetail.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				FECE65E1228D2DE800451E8A /* CoreDataStack.swift in Sources */,
 				FECE65EF228DE6E100451E8A /* FetchTripsController.swift in Sources */,
 				FE855233228E0FF600725C71 /* Waypoint+CoreDataClass.swift in Sources */,
+				FE855238228E48DD00725C71 /* AddWaypointControllerDetail.swift in Sources */,
 				FECE65FD228DF7E100451E8A /* PlannedTrips.xcdatamodeld in Sources */,
 				FECE65DA228CEE3900451E8A /* WaypointsController.swift in Sources */,
 				FE855234228E0FF600725C71 /* Waypoint+CoreDataProperties.swift in Sources */,

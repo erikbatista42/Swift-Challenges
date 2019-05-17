@@ -26,10 +26,19 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let addController = segue.destination as! AddController
-            addController.managedObjectContext = self.managedObjectContext
         
+        if segue.identifier == "addControllerId" {
+            let addController = segue.destination as! AddController
+            addController.managedObjectContext = self.managedObjectContext
+        } else if segue.identifier == "waypointControllerId" {
+            let waypointController = segue.destination as! WaypointsController
+            waypointController.trip = self.trip
+            waypointController.tripNameLabel.text = trip.tripName
+            
+        }
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,17 +65,20 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let waypointsController = WaypointsController()
         let emptyWaypointsController = EmptyWaypointsController()
-        let trip = fetchedResultsController.object(at: indexPath)
+        trip = fetchedResultsController.object(at: indexPath)
+        
+        print(trip)
+        
         
         if trip.hasWayPoint == true {
-            waypointsController.trip = trip
-            waypointsController.managedObjectContext = self.managedObjectContext
-            let viewWaypoints = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewWaypoints") as UIViewController
-            self.navigationController?.pushViewController(viewWaypoints, animated: true)
+            
+//            waypointsController.performSegue(withIdentifier: "waypointControllerId", sender: self)
+    
         } else {
             emptyWaypointsController.trip = trip
             emptyWaypointsController.managedObjectContext = self.managedObjectContext
