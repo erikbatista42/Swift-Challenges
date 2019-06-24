@@ -32,27 +32,41 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
-        let rowKey = photos.allKeys[indexPath.row] as! String
         
-        var image : UIImage?
+        let rowKey = self.photos.allKeys[indexPath.row] as! String
+        // load on background
         
-        guard let imageURL = URL(string:photos[rowKey] as! String),
-            let imageData = try? Data(contentsOf: imageURL) else {
-                return cell
+        DispatchQueue.global(qos: .background).async {
+            // This is run on the background queue
+            
+            
+            var image : UIImage?
+            
+            guard let imageURL = URL(string:self.photos[rowKey] as! String),
+                let imageData = try? Data(contentsOf: imageURL) else {
+                    return
+            }
+            
+            let unfilteredImage = UIImage(data:imageData)
+            image = self.applySepiaFilter(unfilteredImage!)
+            DispatchQueue.main.async {
+                // This is run on the main queue, after the previous code in outer block
+                // Configure the cell...
+                cell.textLabel?.text = rowKey
+                if image != nil {
+                    cell.imageView?.image = image!
+                }
+            }
         }
         
         // Simulate a network wait
-        Thread.sleep(forTimeInterval: 1)
-        print("sleeping 1 sec")
+//        Thread.sleep(forTimeInterval: 1)
+//        print("sleeping 1 sec")
         
-        let unfilteredImage = UIImage(data:imageData)
-        image = self.applySepiaFilter(unfilteredImage!)
         
-        // Configure the cell...
-        cell.textLabel?.text = rowKey
-        if image != nil {
-            cell.imageView?.image = image!
-        }
+        
+        
+        
         return cell
     }
     
