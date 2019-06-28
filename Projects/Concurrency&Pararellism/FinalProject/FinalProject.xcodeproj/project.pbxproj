@@ -17,6 +17,7 @@
 		FE650CA322C589610023BAA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE650CA122C589610023BAA2 /* LaunchScreen.storyboard */; };
 		FE650CAE22C589610023BAA2 /* FinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE650CAD22C589610023BAA2 /* FinalProjectTests.swift */; };
 		FE650CB922C589610023BAA2 /* FinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE650CB822C589610023BAA2 /* FinalProjectUITests.swift */; };
+		FE76CC7122C5AB7100BB5453 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76CC7022C5AB7100BB5453 /* MainCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FE650CB422C589610023BAA2 /* FinalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE650CB822C589610023BAA2 /* FinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectUITests.swift; sourceTree = "<group>"; };
 		FE650CBA22C589610023BAA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE76CC7022C5AB7100BB5453 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				FE650C9822C5895E0023BAA2 /* AppDelegate.swift */,
+				FE76CC7022C5AB7100BB5453 /* MainCollectionViewCell.swift */,
 				FE650C9A22C5895E0023BAA2 /* ViewController.swift */,
 				FE650C9C22C5895E0023BAA2 /* Main.storyboard */,
 				FE650C9F22C589610023BAA2 /* Assets.xcassets */,
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE650C9B22C5895E0023BAA2 /* ViewController.swift in Sources */,
+				FE76CC7122C5AB7100BB5453 /* MainCollectionViewCell.swift in Sources */,
 				FE650C9922C5895E0023BAA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

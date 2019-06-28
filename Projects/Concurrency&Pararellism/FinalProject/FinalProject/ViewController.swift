@@ -9,9 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-    
-    
-    
+
     var collectionView: UICollectionView!
     let flowLayout = UICollectionViewFlowLayout()
     let cellId = "cellId"
@@ -23,16 +21,14 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     }
     
     func setupCollectionView() {
-        let navBarSize = navigationController?.navigationBar.frame.height
-        let calculateHeightOfCollectionView = view.bounds.height
-        let frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: calculateHeightOfCollectionView)
+        let frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
         collectionView = UICollectionView(frame: frame, collectionViewLayout: flowLayout)
         
         // Use this property to extend the space between your content and the edges of the content view.
         collectionView.contentInset = UIEdgeInsets(top: 15, left: 6, bottom: 15, right: 6)
         
         // method to tell the collection view how to create a new cell of the given type
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         
         // The delegate is the behavior of a cell (What happens when it is tapped, when double tapped, if you hold it etc..
         collectionView.delegate = self
@@ -50,16 +46,15 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        //        cell.backgroundColor = #colorLiteral(red: 0.2941176471, green: 0.3098039216, blue: 0.3882352941, alpha: 1)
-        // Makes cell corners round
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MainCollectionViewCell
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 15
         
 //        let photoURL = URL(string: videoThumbnailLinks[indexPath.row])
 //        let ranURL = URL(string: "http://www.huh.com")
 //        cell.backgroundImage.af_setImage(withURL: photoURL ?? ranURL!)
-        cell.backgroundColor = .blue
+        cell.backgroundImage.image = UIImage(named: "message")
+
         return cell
     }
     
