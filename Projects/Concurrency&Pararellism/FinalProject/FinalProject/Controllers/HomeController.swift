@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class HomeController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
     var collectionView: UICollectionView!
     let flowLayout = UICollectionViewFlowLayout()
