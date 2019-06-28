@@ -1,16 +1,16 @@
 PODS:
-  - CollectionViewSlantedLayout (3.1.1)
+  - Kingfisher (5.2.0)
 
 DEPENDENCIES:
-  - CollectionViewSlantedLayout (~> 3.1)
+  - Kingfisher (~> 5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - CollectionViewSlantedLayout
+    - Kingfisher
 
 SPEC CHECKSUMS:
-  CollectionViewSlantedLayout: 24397455acd2461960bc45d394e0ef99c17d03ce
+  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
 
-PODFILE CHECKSUM: d7a492bb3d2deae33883fb502065c465b2d4b070
+PODFILE CHECKSUM: ad04574da4c0b45673de41b7fbb5007cc5c47b0e
 
 COCOAPODS: 1.5.3

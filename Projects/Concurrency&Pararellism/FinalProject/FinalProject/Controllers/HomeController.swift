@@ -7,18 +7,43 @@
 //
 
 import UIKit
+import Kingfisher
 
-class HomeController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class HomeController: UIViewController {
 
     var collectionView: UICollectionView!
     let flowLayout = UICollectionViewFlowLayout()
     let cellId = "cellId"
+    
+    let key = "ed9a85e21a51350442134e45e991dec9"
+    let appSecret = "d68055091d356b75"
+    
+    // request format .getPopular
+    let methodRequest = "flickr.photos.getPopular"
+
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCollectionView()
+        
+    
     }
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+}
+
+extension HomeController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func setupCollectionView() {
         let frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
@@ -50,11 +75,15 @@ class HomeController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 15
         
-//        let photoURL = URL(string: videoThumbnailLinks[indexPath.row])
-//        let ranURL = URL(string: "http://www.huh.com")
-//        cell.backgroundImage.af_setImage(withURL: photoURL ?? ranURL!)
+        //        let photoURL = URL(string: videoThumbnailLinks[indexPath.row])
+        //        let ranURL = URL(string: "http://www.huh.com")
+        //        cell.backgroundImage.af_setImage(withURL: photoURL ?? ranURL!)
         cell.backgroundImage.image = UIImage(named: "message")
-
+        
+        let imageID = "22804318780"
+        let imageSecret = "9b9037da15"
+        let url = URL(string: "https://farm1.staticflickr.com/2/\(imageID)_\(imageSecret)_m.jpg")
+        cell.backgroundImage.kf.setImage(with: url)
         return cell
     }
     
@@ -80,7 +109,6 @@ class HomeController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 13
     }
-
-
 }
+
 

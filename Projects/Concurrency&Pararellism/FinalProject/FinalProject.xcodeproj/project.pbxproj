@@ -18,6 +18,7 @@
 		FE650CAE22C589610023BAA2 /* FinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE650CAD22C589610023BAA2 /* FinalProjectTests.swift */; };
 		FE650CB922C589610023BAA2 /* FinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE650CB822C589610023BAA2 /* FinalProjectUITests.swift */; };
 		FE76CC7122C5AB7100BB5453 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76CC7022C5AB7100BB5453 /* MainCollectionViewCell.swift */; };
+		FED1E1C922C66E3200288D09 /* PhotoMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED1E1C822C66E3100288D09 /* PhotoMetadata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FE650CB822C589610023BAA2 /* FinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectUITests.swift; sourceTree = "<group>"; };
 		FE650CBA22C589610023BAA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE76CC7022C5AB7100BB5453 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		FED1E1C822C66E3100288D09 /* PhotoMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMetadata.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				FE76CC7222C6500200BB5453 /* Singleton */,
-				FED1E1C422C650DE00288D09 /* Views */,
+				FED1E1C722C6517E00288D09 /* Model */,
 				FED1E1C522C650ED00288D09 /* Controllers */,
+				FED1E1C422C650DE00288D09 /* Views */,
 				FED1E1C622C6511800288D09 /* Resources */,
 			);
 			path = FinalProject;
@@ -198,6 +201,14 @@
 				FE650C9F22C589610023BAA2 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FED1E1C722C6517E00288D09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FED1E1C822C66E3100288D09 /* PhotoMetadata.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,13 +417,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CollectionViewSlantedLayout/CollectionViewSlantedLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionViewSlantedLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -427,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE650C9B22C5895E0023BAA2 /* HomeController.swift in Sources */,
+				FED1E1C922C66E3200288D09 /* PhotoMetadata.swift in Sources */,
 				FE76CC7122C5AB7100BB5453 /* MainCollectionViewCell.swift in Sources */,
 				FE650C9922C5895E0023BAA2 /* AppDelegate.swift in Sources */,
 			);
@@ -606,7 +618,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFUU36AARG;
-				INFOPLIST_FILE = FinalProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FinalProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -625,7 +637,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFUU36AARG;
-				INFOPLIST_FILE = FinalProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FinalProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,7 +6,7 @@ target 'FinalProject' do
   use_frameworks!
 
   # Pods for FinalProject
-  pod 'CollectionViewSlantedLayout', '~> 3.1'
+  pod 'Kingfisher', '~> 5.0'
   
   target 'FinalProjectTests' do
     inherit! :search_paths
