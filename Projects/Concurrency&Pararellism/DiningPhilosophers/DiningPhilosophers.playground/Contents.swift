@@ -15,7 +15,7 @@ class ForkPair {
         self.letftIndex = leftIndex
         self.rightIndex = rightIndex
         
-        // Order forks by index to prevent deadlock
+        // Prevent deadlocks by putting forks in order
         if leftIndex > rightIndex {
             leftFork = ForkPair.forks[leftIndex]
             rightFork = ForkPair.forks[rightIndex]
@@ -32,7 +32,7 @@ class ForkPair {
     }
     
     func putDownFork() {
-        // Order is arbitrary
+        // Arbitrary order doesn't matter
         leftFork.signal()
         rightFork.signal()
     }
@@ -73,7 +73,6 @@ class Philosophers {
     
 }
 
-
 let globalSemaphore = DispatchSemaphore(value: 0)
 
 for i in 0..<philosophers {
@@ -84,8 +83,7 @@ for i in 0..<philosophers {
 }
 
 for semaphore in ForkPair.forks {
-    // Start the thread by signaling the semaphore
-    semaphore.signal()
+    semaphore.signal() // Start threads
 }
 
 globalSemaphore.wait() // Wait forever
